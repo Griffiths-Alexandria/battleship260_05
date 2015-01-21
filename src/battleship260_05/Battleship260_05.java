@@ -18,6 +18,7 @@ public class Battleship260_05 {
         // TODO code application logic here
         
         //Alex Griffiths was here testing this out
+        //Christian Molina, testing through NetBeans as well
     }
     
 }
