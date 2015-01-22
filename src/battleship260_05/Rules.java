@@ -17,7 +17,7 @@ public class Rules {
     
     
     public void displayRules() {
-        System.out.println("\n Welcome " + this.name);
+        System.out.println("\n Welcome "); //add name to this greeting
         System.out.println(this.instructions); 
     }
 }
