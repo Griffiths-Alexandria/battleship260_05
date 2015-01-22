@@ -41,6 +41,12 @@ public class Battleship260_05 {
         
         setupBoard.showBoardType();
         
+        Rules setupRules = new Rules();
+        
+        setupRules.displayRules(); 
+
+//is this what it means on the last bullet point of the individual assignment?
+        
         //Sue Francis testing
         //Alex Griffiths was here testing this out
         //Christian Molina, testing through NetBeans as well

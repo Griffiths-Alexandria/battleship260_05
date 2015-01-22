@@ -10,9 +10,9 @@ package battleship260_05;
  * @author alex griffiths
  */
 public class Rules {
-    String instructions = "Welcome, This is Battleship!!\n\n"
-            + "You will be playing against your frieind \n\n"
-            + "Here is where I will put the official rules \n\n"
+    String instructions = "This is Battleship!!\n\n"
+            + "You will be playing against your frieind. \n\n"
+            + "Here is where I will put the official rules. \n\n"
             +"Good Luck! \n\n"; 
     
     
