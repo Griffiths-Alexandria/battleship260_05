@@ -19,6 +19,7 @@ public class Battleship260_05 {
         
         //Alex Griffiths was here testing this out
         //Christian Molina, testing through NetBeans as well
+        //Rachel Yancey here and tested
     }
     
 }
