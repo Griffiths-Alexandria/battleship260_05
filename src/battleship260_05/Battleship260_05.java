@@ -1,15 +1,11 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package battleship260_05;
 
 /**
  *
  * @author Logan Work
  */
-
+import java.util.Scanner;
 
 public class Battleship260_05 {
 
@@ -19,6 +15,9 @@ public class Battleship260_05 {
     String player1 = "Joe";
     String player2 = "Lucy";
     
+    String name;
+    String instructions = "This is where the instructions will go.";
+    
     void showPlayerOne() {
         System.out.println(player1);
     }
@@ -27,7 +26,6 @@ public class Battleship260_05 {
     }
     
     public static void main(String[] args) {
-        // TODO code application logic here
                 
         Battleship260_05 newGame = new Battleship260_05();
         
