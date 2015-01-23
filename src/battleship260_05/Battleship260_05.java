@@ -50,32 +50,18 @@ public class Battleship260_05 {
 //is this what it means on the last bullet point of the individual assignment?
         
         // Creating new instances of each ship
-        Ship1 newShip1 = new Ship1();
-        Ship2 newShip2 = new Ship2();
-        Ship3 newShip3 = new Ship3();
-        Ship4 newShip4 = new Ship4();
-        Ship5 newShip5 = new Ship5();
+        Ship Submarine = new Ship("Submarine", "A 3-Space Ship", 3);
+        Ship Carrier = new Ship("Aircraft Carrier", "A 5-Space Ship", 5);
+        Ship Patrol = new Ship("Patrol Boat", "A 2-Space Ship", 2);
+        Ship Battleship = new Ship("Battleship", "A 4-Space Ship", 4);
+        Ship Cruiser = new Ship("Cruiser", "A 3-Space Ship", 3);
         
         //Displaying each ship info
-        newShip1.showDescription();
-        newShip1.showSize();
-        newShip1.showHitCount();
-        
-        newShip2.showDescription();
-        newShip2.showSize();
-        newShip2.showHitCount();
-        
-        newShip3.showDescription();
-        newShip3.showSize();
-        newShip3.showHitCount();
-        
-        newShip4.showDescription();
-        newShip4.showSize();
-        newShip4.showHitCount();
-        
-        newShip5.showDescription();
-        newShip5.showSize();
-        newShip5.showHitCount();
+        Submarine.getInfo();
+        Carrier.getInfo();
+        Patrol.getInfo();
+        Battleship.getInfo();
+        Cruiser.getInfo();
         
         //Sue Francis testing
         //Alex Griffiths was here testing this out
