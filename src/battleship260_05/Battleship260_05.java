@@ -72,7 +72,7 @@ public class Battleship260_05 {
         newShip4.showHitCount();
         
         newShip5.showDescription();
-        newShip4.showSize();
+        newShip5.showSize();
         newShip5.showHitCount();
         
         //Sue Francis testing
