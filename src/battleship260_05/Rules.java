@@ -20,4 +20,8 @@ public class Rules {
         System.out.println("\n Welcome \n\n "); //add name to this greeting
         System.out.println(this.instructions); 
     }
+    
+    public String getRules() {
+        return instructions;
+    }
 }

@@ -45,9 +45,7 @@ public class Battleship260_05 {
         
         setupBoard.showBoardType();
         
-        Rules setupRules = new Rules();
         
-        setupRules.displayRules(); 
 
 //is this what it means on the last bullet point of the individual assignment?
         
@@ -98,8 +96,10 @@ public class Battleship260_05 {
         this.name = input.next();
     }
     public void displayHelp()   {
+        Rules setupRules = new Rules();
         System.out.println("\n Welcome " + this.name + "\n");
-        System.out.println(this.instructions);
+        System.out.println(setupRules.getRules());
+        
     }
     
 }
