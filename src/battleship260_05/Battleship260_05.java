@@ -16,7 +16,13 @@ public class Battleship260_05 {
     String player2 = "Lucy";
     
     String name;
-    String instructions = "This is where the instructions will go.";
+    String instructions = "Welcome to the game of Battleship! \n\n"
+           + "Player 1 and Player 2 will be competing with each other. \n"
+           + "Each Player will be given the oppurtunity to hid their ships. \n"
+           + "While hiding your ships the opposite player must be honest and look away. \n"
+           + "After you have completed your turn the next player will have to enter [n] to view his/or her board."
+           + "Additional instructions will be added later..\n"
+           + "Good Luck!";
     
     void showPlayerOne() {
         System.out.println(player1);
@@ -79,8 +85,22 @@ public class Battleship260_05 {
         //Rachel Yancey here and tested
         //Wendell Tanner - Test
         //Daniel Diaz was here
+           
+        Battleship260_05 myGame = new Battleship260_05();
+        myGame.getName();
+        myGame.displayHelp();
+        
+        // TODO code application logic here
     }
-    
+    public void getName()    {
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter Your name: ");
+        this.name = input.next();
+    }
+    public void displayHelp()   {
+        System.out.println("\n Welcome " + this.name + "\n");
+        System.out.println(this.instructions);
+    }
     
 }
 class Players {
@@ -92,5 +112,6 @@ class Players {
     }
     void showPlayerTwo() {
         System.out.println(player2);
-    }*/
+    }
+    */
 }
