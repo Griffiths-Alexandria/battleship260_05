@@ -12,8 +12,8 @@ public class Battleship260_05 {
     /**
      * @param args the command line arguments
      */
-    String player1 = "Joe";
-    String player2 = "Lucy";
+    Player player1 = new Player("Joe","black");
+    Player player2 = new Player("Lucy","red");
     
     String name;
     String instructions = "Welcome to the game of Battleship! \n\n"
@@ -25,10 +25,12 @@ public class Battleship260_05 {
            + "Good Luck!";
     
     void showPlayerOne() {
-        System.out.println(player1);
+        System.out.println(player1.getName());
+        System.out.println(player1.getColor());
     }
     void showPlayerTwo() {
-        System.out.println(player2);
+        System.out.println(player2.getName());
+        System.out.println(player2.getColor());
     }
     
     public static void main(String[] args) {
@@ -88,16 +90,4 @@ public class Battleship260_05 {
         
     }
     
-}
-class Players {
-    /*String player1 = "Joe";
-    String player2 = "Lucy";
-    
-    void showPlayerOne() {
-        System.out.println(player1);
-    }
-    void showPlayerTwo() {
-        System.out.println(player2);
-    }
-    */
 }
