@@ -12,8 +12,8 @@ public class Battleship260_05 {
     /**
      * @param args the command line arguments
      */
-    String player1 = "Joe";
-    String player2 = "Lucy";
+    Player player1 = new Player("Joe","black");
+    Player player2 = new Player("Lucy","red");
     
     String name;
     String instructions = "Welcome to the game of Battleship! \n\n"
@@ -25,10 +25,12 @@ public class Battleship260_05 {
            + "Good Luck!";
     
     void showPlayerOne() {
-        System.out.println(player1);
+        System.out.println(player1.getName());
+        System.out.println(player1.getColor());
     }
     void showPlayerTwo() {
-        System.out.println(player2);
+        System.out.println(player2.getName());
+        System.out.println(player2.getColor());
     }
     
     public static void main(String[] args) {
@@ -65,10 +67,16 @@ public class Battleship260_05 {
         //Wendell Tanner - Test
         //Daniel Diaz was here
            
-        //Battleship260_05 myGame = new Battleship260_05();
-        newGame.getName();
-        newGame.displayHelp();
         
+        Battleship260_05 myGame = new Battleship260_05();
+        myGame.getName();
+        myGame.displayHelp();
+        myGame.displayMenu();
+
+        //For now I am treating this main class as the controller. Below I will
+        //create a board from a size input from the BoardView, which I will pass to
+        //the BoardModel. The Model will then return the grid values to the View, 
+        //and the view will display it to the user.
         //Bring in the Board View and get the size from the user
         BoardView newBoard = new BoardView();
         int boardSize = newBoard.getBoardSize();
@@ -94,11 +102,17 @@ public class Battleship260_05 {
         System.out.println(setupRules.getRules());
         
     }
-    //For now I am treating this main class as the controller. Below I will
-    //create a board from a size input from the BoardView, which I will pass to
-    //the BoardModel. The Model will then return the grid values to the View, 
-    //and the view will display it to the user.
+
     
+    
+    
+
+
+
+    public void displayMenu(){
+        Menu menuDisp = new Menu();
+        System.out.println(menuDisp.menuDisp());
+    }
     
 }
 
