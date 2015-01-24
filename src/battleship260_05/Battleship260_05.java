@@ -39,11 +39,6 @@ public class Battleship260_05 {
         
         newGame.showPlayerTwo();
         
-        Board setupBoard = new Board();
-        
-        setupBoard.showBoardSize();
-        
-        setupBoard.showBoardType();
         
         
 
@@ -70,10 +65,22 @@ public class Battleship260_05 {
         //Wendell Tanner - Test
         //Daniel Diaz was here
            
-        Battleship260_05 myGame = new Battleship260_05();
-        myGame.getName();
-        myGame.displayHelp();
+        //Battleship260_05 myGame = new Battleship260_05();
+        newGame.getName();
+        newGame.displayHelp();
         
+        //Bring in the Board View and get the size from the user
+        BoardView newBoard = new BoardView();
+        int boardSize = newBoard.getBoardSize();
+        
+        //Bring in the Board Model, which requires a size and
+        //a mode(setup = true, gameplay = false)
+        BoardModel boardData = new BoardModel(boardSize, true);
+        String[][] boardInfo = boardData.getBoard();
+        
+        //Pass the Board information back to the View
+        newBoard.displayBoard(boardInfo);
+
         // TODO code application logic here
     }
     public void getName()    {
@@ -87,17 +94,11 @@ public class Battleship260_05 {
         System.out.println(setupRules.getRules());
         
     }
+    //For now I am treating this main class as the controller. Below I will
+    //create a board from a size input from the BoardView, which I will pass to
+    //the BoardModel. The Model will then return the grid values to the View, 
+    //and the view will display it to the user.
+    
     
 }
-class Players {
-    /*String player1 = "Joe";
-    String player2 = "Lucy";
-    
-    void showPlayerOne() {
-        System.out.println(player1);
-    }
-    void showPlayerTwo() {
-        System.out.println(player2);
-    }
-    */
-}
+
