@@ -75,6 +75,7 @@ public class Battleship260_05 {
         Battleship260_05 myGame = new Battleship260_05();
         myGame.getName();
         myGame.displayHelp();
+        myGame.displayMenu();
         
         // TODO code application logic here
     }
@@ -88,6 +89,10 @@ public class Battleship260_05 {
         System.out.println("\n Welcome " + this.name + "\n");
         System.out.println(setupRules.getRules());
         
+    }
+    public void displayMenu(){
+        Menu menuDisp = new Menu();
+        System.out.println(menuDisp.menuDisp());
     }
     
 }
