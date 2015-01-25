@@ -66,6 +66,7 @@ public class Battleship260_05 {
         //Rachel Yancey here and tested
         //Wendell Tanner - Test
         //Daniel Diaz was here
+        //Sterling Miller was here
            
         
         Battleship260_05 myGame = new Battleship260_05();
