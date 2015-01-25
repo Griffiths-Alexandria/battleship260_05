@@ -41,8 +41,7 @@ public class Battleship260_05 {
         
         newGame.showPlayerTwo();
         
-        
-        
+          
 
 //is this what it means on the last bullet point of the individual assignment?
         
@@ -59,6 +58,8 @@ public class Battleship260_05 {
         Patrol.getInfo();
         Battleship.getInfo();
         Cruiser.getInfo();
+        
+        
         
         //Sue Francis testing
         //Alex Griffiths was here testing this out
@@ -89,6 +90,13 @@ public class Battleship260_05 {
         //Pass the Board information back to the View
         newBoard.displayBoard(boardInfo);
 
+    /** Daniel Diaz Homework: Create a new instance of the class in the main( )  function of the main class 
+    *   and call the display functions to list the values of the variables in the main ( ) funciton.
+    */
+    ScoreBoard NewGame = new ScoreBoard ("Joe Black", 5, 4, 3, 2, 3, "Sue Red", 5, 1, 2);
+        
+    NewGame.getInfo();       
+        
         // TODO code application logic here
     }
     public void getName()    {
