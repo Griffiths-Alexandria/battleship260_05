@@ -7,7 +7,9 @@ package battleship260_05;
 
 /**
  *
- * @author Sue Francis
+ * @author Sue FrancisString name;
+  String color;
+  int wins;
  */
 public class Player {
   String name;
