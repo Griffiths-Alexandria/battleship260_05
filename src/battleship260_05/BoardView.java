@@ -30,12 +30,12 @@ public class BoardView {
                     
                 } else {
                     if (j==0){
-                        System.out.print(i+1);
                         if (i<9){
                             System.out.print(" ");
                         }
+                        System.out.print(i+1);
                     }
-                    System.out.print("[ ]");
+                    System.out.print("["+grid[i][j]+"]");
                 }
 
             }

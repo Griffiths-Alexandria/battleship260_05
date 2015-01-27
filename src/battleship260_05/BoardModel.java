@@ -23,9 +23,15 @@ public class BoardModel {
     void setShip(int xStartPos, int yStartPos, int shipSize, boolean vertical, String shipName) {
         
     }
-    public String[][] getBoard(){
+    public String[][] getNewBoard(){
+        int i,j;
         this.boardSize = boardSize;
         this.grid = new String[this.boardSize][this.boardSize];
+        for (i=0;i<this.boardSize;i++){
+            for (j=0; j<this.boardSize;j++){
+                this.grid[i][j] = " ";
+            }
+        }
         return grid;     
     }
 }

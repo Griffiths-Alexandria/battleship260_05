@@ -93,7 +93,7 @@ public class Battleship260_05 {
         //Bring in the Board Model, which requires a size and
         //a mode(setup = true, gameplay = false)
         BoardModel boardData = new BoardModel(boardSize, true);
-        String[][] boardInfo = boardData.getBoard();
+        String[][] boardInfo = boardData.getNewBoard();
         
         //Pass the Board information back to the View
         newBoard.displayBoard(boardInfo);
