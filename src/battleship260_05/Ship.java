@@ -31,12 +31,17 @@ public class Ship {
     int i;
     
     void hitReduction() {
-        result = coin.nextInt(2);
-        if (result == 1) {
-            hitCount -= 1;
-            System.out.println("A Ship has been hit!");
-            if (hitCount <= 0) {
-                System.out.println("Ship Destroyed!");
+        result = coin.nextInt(100);
+        if (result >= 50) {
+            if (hitCount == 0) {
+                System.out.println("There is no ship remaining!");
+            }
+            else {
+                hitCount -= 1;
+                System.out.println("A Ship has been hit!");
+                if (hitCount <= 0) {
+                    System.out.println("Ship Destroyed!");
+                }
             }
         }
         else {

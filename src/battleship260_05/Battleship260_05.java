@@ -62,7 +62,11 @@ public class Battleship260_05 {
         Battleship.getInfo();
         Cruiser.getInfo();
         
-        
+        Patrol.hitReduction();
+        Patrol.hitReduction();
+        Patrol.hitReduction();
+        Patrol.hitReduction();
+        Patrol.hitReduction();
         
         //Sue Francis testing
         //Alex Griffiths was here testing this out
