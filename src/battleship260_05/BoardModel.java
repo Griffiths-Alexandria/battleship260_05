@@ -20,8 +20,15 @@ public class BoardModel {
         this.setup = setup;
         
     }
-    void setShip(int xStartPos, int yStartPos, int shipSize, boolean vertical, String shipName) {
-        
+    void setShip(int xStartPos, int yStartPos, int shipSize, boolean vertical, String shipLetter) {
+        int i;
+        for(i=0;i<shipSize; i++){
+            if (vertical){
+                grid[xStartPos][yStartPos+i] = shipLetter;
+            } else {
+                grid[xStartPos+i][yStartPos] = shipLetter;
+            }
+        }
     }
     public String[][] getNewBoard(){
         int i,j;
@@ -33,5 +40,8 @@ public class BoardModel {
             }
         }
         return grid;     
+    }
+    public String[][] getBoard(){
+        return grid;
     }
 }
