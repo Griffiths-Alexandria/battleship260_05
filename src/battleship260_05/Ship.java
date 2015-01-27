@@ -14,8 +14,6 @@ public class Ship {
     String name;
     String description;
     int hitCount;
-    int result;
-    int i;
     
     Ship(String name, String description, int size) {
         this.name = name;
@@ -29,6 +27,8 @@ public class Ship {
     
     //Stuff for Individual Assignment
     Random coin = new Random();
+    int result;
+    int i;
     
     void hitReduction() {
         result = coin.nextInt(2);
