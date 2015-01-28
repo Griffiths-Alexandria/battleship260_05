@@ -22,7 +22,8 @@ public class Battleship260_05 {
            + "While hiding your ships the opposite player must be honest and look away. \n"
            + "After you have completed your turn the next player will have to enter [n] to view his/or her board."
            + "Additional instructions will be added later..\n"
-           + "Good Luck!";
+           + "Good Luck!"; 
+    String page; 
     
     void showPlayerOne() {
         System.out.println(player1.getName());
@@ -111,15 +112,23 @@ public class Battleship260_05 {
         System.out.println("Enter Your name: ");
         this.name = input.next();
     }
+    
+    
     public void displayHelp()   {
         Rules setupRules = new Rules();
         System.out.println("\n Welcome " + this.name + "\n");
         System.out.println(setupRules.getRules());
+        
+        Scanner input = new Scanner(System.in); 
+        System.out.println("Do you wish to continue? Type Y/N \n"
+                + "For Main Menu, type M:"); 
+        this.page = input.next(); 
+        
         
     }
     public void displayMenu(){
         Menu menuDisp = new Menu();
         System.out.println(menuDisp.menuDisp());
     }
-    
+     
 }
