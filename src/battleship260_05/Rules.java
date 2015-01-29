@@ -5,21 +5,25 @@
  */
 package battleship260_05;
 
+import java.util.Scanner;
+
 /**
  * Rules Class 
  * @author alex griffiths
  */
 public class Rules {
+    int rulesdisplay; 
+    boolean setup; 
+    String rulespage; 
+    
+
+        
     String instructions = "This is Battleship!!\n\n"
             + "You will be playing against your frieind. \n\n"
             + "Here is where I will put the official rules. \n\n"
             +"Good Luck! \n\n"; 
       
 //experimenting with page and Y/N if/then loops
-    String page; 
-    
-    
-    
     String pageone = "PREPARE FOR BATTLE\n\n"
         +" Each player will place their fleet of 5 ships on your ocean \n" 
         +"grid. Each ship can be placed in any horizontal or vertical \n" 
@@ -28,7 +32,7 @@ public class Rules {
         +"the ships have been set they cannot be moved and the game will\n" 
         +"begin.\n\n"; 
     
-    String pagetwo= "HOW TO PLAY\n\n"
+     String pagetwo= "HOW TO PLAY\n\n"
         +"Choose which partner will go first. Turns will\n" 
         +"alternate with each player calling out one shot per turn to\n"
         +"try to hit each other’s ships.\n"; 
@@ -73,11 +77,11 @@ public class Rules {
     }
     */
     
+    
+    
     public String getRules() {
         return pageone;
-        /* if ... then 
-        
-        */
+       
     }
     
       

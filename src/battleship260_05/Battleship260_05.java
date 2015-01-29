@@ -119,10 +119,10 @@ public class Battleship260_05 {
         System.out.println("\n Welcome " + this.name + "\n");
         System.out.println(setupRules.getRules());
         
-        Scanner input = new Scanner(System.in); 
+        Scanner answer = new Scanner(System.in); 
         System.out.println("Do you wish to continue? Type Y/N \n"
                 + "For Main Menu, type M:"); 
-        this.page = input.next(); 
+        this.page = answer.nextLine(); 
         
         
     }
