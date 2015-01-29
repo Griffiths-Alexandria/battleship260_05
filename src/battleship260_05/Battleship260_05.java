@@ -103,7 +103,10 @@ public class Battleship260_05 {
     *   and call the display functions to list the values of the variables in the main ( ) funciton.
     */
         
-        
+        // Menu_temp stuff
+        menu_temp newMenu = new menu_temp("NEW GAME");
+        newMenu.titleShow();
+        newMenu.menuShow();
         
         // TODO code application logic here
     }
