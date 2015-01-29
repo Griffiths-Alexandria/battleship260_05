@@ -12,6 +12,12 @@ import java.util.Scanner;
  *
  * @author Christian
  */
+
+/*
+* This is something I came up with that might help you out Wendell.
+* Just take a look and tell me what you think.
+*/
+
 public class menu_temp {
     String title_edges = "**************************************************************";
     String title_content;
