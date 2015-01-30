@@ -42,7 +42,7 @@ public class Battleship260_05 {
     int hits;
     int misses;
     
-    void GetPlayerAccuracy(int hits, int misses) {
+    void getPlayerAccuracy(int hits, int misses) {
         if (hits < 0) {
             System.out.println("Invalid number of hits\n");
             return;
@@ -134,9 +134,9 @@ public class Battleship260_05 {
         // TODO code application logic here
         
         //Paired Programming Assignment Lesson 3
-        newGame.GetPlayerAccuracy(5, 8);
-        newGame.GetPlayerAccuracy(-1, 6);
-        newGame.GetPlayerAccuracy(5, -1);
+        newGame.getPlayerAccuracy(5, 8);
+        newGame.getPlayerAccuracy(-1, 6);
+        newGame.getPlayerAccuracy(5, -1);
     }
     public void getName()    {
         Scanner input = new Scanner(System.in);
