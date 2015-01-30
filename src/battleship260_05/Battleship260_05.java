@@ -6,6 +6,7 @@ package battleship260_05;
  * @author Logan Work
  */
 import java.util.Scanner;
+import java.text.*;
 
 public class Battleship260_05 {
 
@@ -32,6 +33,25 @@ public class Battleship260_05 {
     void showPlayerTwo() {
         System.out.println(player2.getName());
         System.out.println(player2.getColor());
+    }
+    
+    // Paired Programming Assignment Lesson 3
+    int hits;
+    int misses;
+    
+    void GetPlayerAccuracy(int hits, int misses) {
+        if (hits < 0) {
+            System.out.println("Invalid number of hits\n");
+            return;
+        }
+        if (misses < 0) {
+            System.out.println("Invalid number of misses\n");
+            return;
+        }
+        int totalShots = hits + misses;
+        double playerAccuracy =  (((double)hits * 100) / (double)totalShots);
+        DecimalFormat df = new DecimalFormat("#.##");
+        System.out.println("Player Accuracy:\t" + df.format(playerAccuracy) + "%\n");
     }
     
     public static void main(String[] args) {
@@ -98,7 +118,7 @@ public class Battleship260_05 {
         
         //Pass the Board information back to the View
         newBoard.displayBoard(boardInfo);
-
+        
     /** Daniel Diaz Homework: Create a new instance of the class in the main( )  function of the main class 
     *   and call the display functions to list the values of the variables in the main ( ) funciton.
     */
@@ -109,6 +129,11 @@ public class Battleship260_05 {
         newMenu.menuShow();
         
         // TODO code application logic here
+        
+        //Paired Programming Assignment Lesson 3
+        newGame.GetPlayerAccuracy(5, 8);
+        newGame.GetPlayerAccuracy(-1, 6);
+        newGame.GetPlayerAccuracy(5, -1);
     }
     public void getName()    {
         Scanner input = new Scanner(System.in);
