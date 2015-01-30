@@ -16,7 +16,10 @@ public class Battleship260_05 {
     Player player1 = new Player("Joe","black");
     Player player2 = new Player("Lucy","red");
     
+    //These are our 2 instance variables
     String name;
+    int choice;
+    
     String instructions = "Welcome to the game of Battleship! \n\n"
            + "Player 1 and Player 2 will be competing with each other. \n"
            + "Each Player will be given the oppurtunity to hid their ships. \n"
@@ -156,7 +159,10 @@ public class Battleship260_05 {
     }
     public void displayMenu(){
         Menu menuDisp = new Menu();
-        System.out.println(menuDisp.menuDisp());
+        Scanner option = new Scanner(System.in);
+        System.out.println(menuDisp.menuDisp()); 
+        System.out.println("Select an option:");
+        this.choice = Integer.parseInt(option.next());
     }
      
 }
