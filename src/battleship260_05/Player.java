@@ -10,16 +10,19 @@ package battleship260_05;
  * @author Sue FrancisString name;
   String color;
   int wins;
+  * revision Sue
  */
 public class Player {
   String name;
   String color;
   int wins;
+  int losses;
   
   Player(String name, String color){
       this.name = name;
       this.color = color;
       this.wins = 0;
+      this.losses =0;
   }
   
   public String getName(){
@@ -32,4 +35,25 @@ public class Player {
   public int getWins(){
       return this.wins;
   }
+  public int getLosses(){
+      return this.losses;
+  }
+  public double GetWinningStatistics(){
+      if (wins < 0){ 
+        System.out.println("Invalid win number\n");
+        return -1;
+      }
+      if (losses < 0){
+        System.out.println("Invalid loss number\r");
+        return -1;
+      }
+      if (wins == 0) return 0;
+      return (double)(wins/gameTotals())*100;
+      
+  } 
+  public int gameTotals(){
+      return (wins + losses);
+      
+}
+  
 }
