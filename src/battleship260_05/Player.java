@@ -40,11 +40,11 @@ public class Player {
   }
   public double GetWinningStatistics(){
       if (wins < 0){ 
-        System.out.println("Invalid win number\n");
+        System.out.println("Invalid number of wins\n");
         return -1;
       }
       if (losses < 0){
-        System.out.println("Invalid loss number\r");
+        System.out.println("Invalid number of losses\r");
         return -1;
       }
       if (wins == 0) return 0;
