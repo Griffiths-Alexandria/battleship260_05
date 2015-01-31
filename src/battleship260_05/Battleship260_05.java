@@ -82,14 +82,15 @@ public class Battleship260_05 {
         
         newGame.showPlayerTwo();
         
+    /** Daniel Diaz Homework: Create a new instance of the class in the main( )  function of the main class 
+    *   and call the display functions to list the values of the variables in the main ( ) funciton.
+    */    
+        
         ScoreBoard NewGame = new ScoreBoard ("Joe Black", 5, 4, 3, 2, 3, "Sue Red", 5, 1, 2);
         
         NewGame.getInfo();       
-          
-
-//is this what it means on the last bullet point of the individual assignment?
-        
-        // Creating new instances of each ship
+      
+        // Creating new instances of each ship. Christian.
         Ship Submarine = new Ship("Submarine", "A 3-Space Ship", 3);
         Ship Carrier = new Ship("Aircraft Carrier", "A 5-Space Ship", 5);
         Ship Patrol = new Ship("Patrol Boat", "A 2-Space Ship", 2);
@@ -139,9 +140,7 @@ public class Battleship260_05 {
         //Pass the Board information back to the View
         newBoard.displayBoard(boardInfo);
         
-    /** Daniel Diaz Homework: Create a new instance of the class in the main( )  function of the main class 
-    *   and call the display functions to list the values of the variables in the main ( ) funciton.
-    */
+    
         
         // Menu_temp stuff
         menu_temp newMenu = new menu_temp("NEW GAME");
