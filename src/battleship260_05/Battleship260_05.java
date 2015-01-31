@@ -57,6 +57,23 @@ public class Battleship260_05 {
         System.out.println("Player Accuracy:\t" + df.format(playerAccuracy) + "%\n");
     }
     
+    //Logan's week 3 individual assignment
+    void getTotalDamage(int hits, int totalShipsLength ){
+        if (totalShipsLength < 1) {
+            System.out.println("Invalid length of all ships\n");
+            return;
+        }
+        if (hits < 0 || hits > totalShipsLength) {
+            System.out.println("Invalid number of hits\n");
+            return;
+        }
+
+        double totalDamage =  ((double)hits / (double)totalShipsLength) * 100;
+        DecimalFormat df = new DecimalFormat("#.##");
+        System.out.println("Total Damage:\t" + df.format(totalDamage) + "%\n");
+    }
+    //End Logan's week 3 individual assignment
+    
     public static void main(String[] args) {
                 
         Battleship260_05 newGame = new Battleship260_05();
@@ -77,14 +94,14 @@ public class Battleship260_05 {
         Ship Carrier = new Ship("Aircraft Carrier", "A 5-Space Ship", 5);
         Ship Patrol = new Ship("Patrol Boat", "A 2-Space Ship", 2);
         Ship Battleship = new Ship("Battleship", "A 4-Space Ship", 4);
-        Ship Cruiser = new Ship("Cruiser", "A 3-Space Ship", 3);
+        Ship Destroyer = new Ship("Cruiser", "A 3-Space Ship", 3);
         
         //Displaying each ship info
         Submarine.getInfo();
         Carrier.getInfo();
         Patrol.getInfo();
         Battleship.getInfo();
-        Cruiser.getInfo();
+        Destroyer.getInfo();
         
         Patrol.hitReduction();
         Patrol.hitReduction();
@@ -137,6 +154,12 @@ public class Battleship260_05 {
         newGame.getPlayerAccuracy(5, 8);
         newGame.getPlayerAccuracy(-1, 6);
         newGame.getPlayerAccuracy(5, -1);
+        
+        //Logan's test for Individual Assignment - Lesson 3
+        newGame.getTotalDamage(5, 17);
+        newGame.getTotalDamage(-1, 17);
+        newGame.getTotalDamage(12, 0);
+        newGame.getTotalDamage(25, 17);
     }
     public void getName()    {
         Scanner input = new Scanner(System.in);
