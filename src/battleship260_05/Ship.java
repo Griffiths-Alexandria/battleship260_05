@@ -40,6 +40,7 @@ public class Ship {
                 hitCount -= 1;
                 System.out.println("A Ship has been hit!");
                 if (hitCount <= 0) {
+                    sunk = true;
                     System.out.println("Ship Destroyed!");
                 }
             }
