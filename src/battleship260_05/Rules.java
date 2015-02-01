@@ -5,6 +5,7 @@
  */
 package battleship260_05;
 
+import java.text.DecimalFormat;
 import java.util.Scanner;
 
 /**
@@ -12,12 +13,28 @@ import java.util.Scanner;
  * @author alex griffiths
  */
 public class Rules {
-    int rulesdisplay; 
-    boolean setup; 
-    String rulespage; 
+      double pageselect;
+      double nextpage;
+       
+      
     
-
+    void getNextPage(double pageselect, double nextpage) {
+        if (pageselect >= 8 && pageselect < 0) {
+            System.out.println("Invalid Page Selection\n");
+            return;
+        }
+        if (1 < nextpage) {
+            System.out.println("Please Select 1 to Continue\n");
+            return;
+        }
         
+        double pagecalc = (nextpage - 1); 
+        int determinepage = (int)(pageselect)+ (int)(pagecalc);
+        
+        System.out.println("We will direct you to page: \t" + determinepage + "\n");
+    }
+    
+    
     String instructions = "This is Battleship!!\n\n"
             + "You will be playing against your frieind. \n\n"
             + "Here is where I will put the official rules. \n\n"
