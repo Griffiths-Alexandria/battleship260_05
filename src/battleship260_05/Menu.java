@@ -23,19 +23,19 @@ public class Menu {
    Random guess = new Random();
    int lucky;
    int luckOut;
-   int thisBoardSize = 10;
+   
    //double averageGuess;
     
    public double getSuggest(){
    for (int counter=1; counter<=10;counter++){
-       lucky = guess.nextInt(this.thisBoardSize);
+       lucky = guess.nextInt(10);
         if (lucky == 0){
             luckOut += (lucky+1);
         }    
         else {
             luckOut += lucky;
         }
-        
+       System.out.println(lucky); 
     }
    double averageGuess = (double) luckOut / 10;
         return averageGuess;
