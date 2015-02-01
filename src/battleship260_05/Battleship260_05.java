@@ -185,6 +185,13 @@ public class Battleship260_05 {
         System.out.println(menuDisp.menuDisp()); 
         System.out.println("Select an option:");
         this.choice = Integer.parseInt(option.next());
+        
+        //Wendell - Individual Assignment 3
+        Menu getSuggest = new Menu();
+        System.out.println("This is my average guess :");
+        System.out.println(getSuggest.menuDisp());
+        //System.out.println("The average random guess is : " + getSuggest.averageGuess);
+
     }
      
 }
