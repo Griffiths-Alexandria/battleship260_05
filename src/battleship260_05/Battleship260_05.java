@@ -159,6 +159,14 @@ public class Battleship260_05 {
         newGame.getTotalDamage(-1, 17);
         newGame.getTotalDamage(12, 0);
         newGame.getTotalDamage(25, 17);
+        
+        /** Daniel Diaz Homework: Create a new instance of the class in the main( )  function of the main class 
+    *   and call the display functions to list the values of the variables in the main ( ) funciton.
+    */    
+        
+        ScoreBoard NewScoreboard = new ScoreBoard ("Joe Black",3, 2, 3, 1, 4, 2, "Sue Red", 5, 1, 2);
+        
+        NewGame.getInfo(); 
     }
     public void getName()    {
         Scanner input = new Scanner(System.in);

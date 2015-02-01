@@ -21,14 +21,16 @@ public class ScoreBoard {
     int opponentTurn;
     int opponentHits;
     int accuracyScoreOpponent;
+    int getShipHits;
     
-    ScoreBoard(String currentPlayer, int playerTurn, int playerHits, int playerShipsLeft,
-               int playerShipsSunk, int accuracyScorePlayer, String opponent, 
-               int opponentTurn,int opponentHits, int accuracyScoreOpponent) 
+    ScoreBoard(String currentPlayer, int playerTurn, int playerHits, int getShipHits, 
+            int playerShipsLeft,int playerShipsSunk, int accuracyScorePlayer, String opponent, 
+            int opponentTurn,int opponentHits, int accuracyScoreOpponent) 
         {
             this.currentPlayer = currentPlayer;
             this.playerTurn = playerTurn;
             this.playerHits = playerHits;
+            this.getShipHits = getShipHits;
             this.playerShipsLeft = playerShipsLeft;
             this.playerShipsSunk = playerShipsSunk;
             this.accuracyScorePlayer = accuracyScorePlayer;
@@ -39,8 +41,8 @@ public class ScoreBoard {
     }
     
     void getInfo() {
-        System.out.println(this.currentPlayer + ", Turn Number: " + this.playerTurn +  " , Number of Hits: " + this.playerHits + 
-                            " , Ships Left: " + this.playerShipsLeft + " , Ships Sunk: " + this.playerShipsSunk + 
+        System.out.println(this.currentPlayer + ", Turn Number: " + this.playerTurn +  " , Total number of Hits: " + this.playerHits + 
+                            " , Hits by Ship:" + this.getShipHits + " , Ships Left: " + this.playerShipsLeft + " , Ships Sunk: " + this.playerShipsSunk + 
                             " , Accuracy Score: " + this.accuracyScorePlayer + "  Challenger's Name: " + this.opponent+
                             " , Challenger's Turn: " + this.opponentTurn + " , Challenger's Hits: " + this.opponentHits +
                             " , Challenger's Accuracy: " + this.accuracyScoreOpponent );
