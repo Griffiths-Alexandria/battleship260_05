@@ -13,7 +13,9 @@ import java.util.Scanner;
  * @author alex griffiths
  */
 public class Rules {
-      double pageselect;
+    
+    //Individual Assignment 3 Alex Griffiths
+    double pageselect;
       double nextpage;
        
       
@@ -33,7 +35,7 @@ public class Rules {
         
         System.out.println("We will direct you to page: \t" + determinepage + "\n");
     }
-    
+    //End Individual Assignment 3 
     
     String instructions = "This is Battleship!!\n\n"
             + "You will be playing against your frieind. \n\n"
