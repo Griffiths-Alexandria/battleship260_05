@@ -45,4 +45,26 @@ public class ScoreBoard {
                             " , Challenger's Turn: " + this.opponentTurn + " , Challenger's Hits: " + this.opponentHits +
                             " , Challenger's Accuracy: " + this.accuracyScoreOpponent );
     }
+    
+    String shipName;
+    int hitsNumber;
+    int shipSize;
+    void getShipHits(String shipName,  int hitsNumber, int shipSize) {
+        if (hitsNumber == 0) {
+            System.out.println( shipName + "has not been hit.\n");
+            return;
+        }
+        if (hitsNumber >= 1) {
+            int hitsLeft = 0;
+            
+            System.out.println( shipName + "has been hit" + hitsNumber + "times and has" +  hitsLeft +  "left.\n");
+            return;
+        }
+        
+        double hitsLeft=  ((double) shipSize - (double)hitsNumber);
+    }
+
+    
+    
+    
 }
