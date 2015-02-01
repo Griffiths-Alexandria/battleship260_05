@@ -173,7 +173,8 @@ public class Battleship260_05 {
         System.out.println("Enter Your name: ");
         this.name = input.next();
     }
-    
+ 
+     
     
     public void displayHelp()   {
         Rules setupRules = new Rules();
@@ -184,6 +185,7 @@ public class Battleship260_05 {
         System.out.println("Do you wish to continue? Type Y/N \n"
                 + "For Main Menu, type M:"); 
         this.page = answer.nextLine(); 
+     
         
         
     }
