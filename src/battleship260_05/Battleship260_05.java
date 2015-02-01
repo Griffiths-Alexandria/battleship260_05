@@ -86,9 +86,7 @@ public class Battleship260_05 {
     *   and call the display functions to list the values of the variables in the main ( ) funciton.
     */    
         
-        ScoreBoard NewGame = new ScoreBoard ("Joe Black", 5, 4, 3, 2, 3, "Sue Red", 5, 1, 2);
-        
-        NewGame.getInfo();       
+              
       
         // Creating new instances of each ship. Christian.
         Ship Submarine = new Ship("Submarine", "A 3-Space Ship", 3);
@@ -166,7 +164,7 @@ public class Battleship260_05 {
         
         ScoreBoard NewScoreboard = new ScoreBoard ("Joe Black",3, 2, 3, 1, 4, 2, "Sue Red", 5, 1, 2);
         
-        NewGame.getInfo(); 
+        NewScoreboard.getInfo(); 
     }
     public void getName()    {
         Scanner input = new Scanner(System.in);
