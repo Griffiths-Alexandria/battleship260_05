@@ -85,7 +85,11 @@ public class Battleship260_05 {
     /** Daniel Diaz Homework: Create a new instance of the class in the main( )  function of the main class 
     *   and call the display functions to list the values of the variables in the main ( ) funciton.
     */    
-        
+        ScoreBoard NewScoreboard = new ScoreBoard ("* Joe Black *", 11, 3, 5, 0, 27.28 , "\n* Sue Red *", 10, 5, 50.00);
+        NewScoreboard.getInfo();
+    
+    //  Displaying the hits by ship in a different way, I will be expecting the data from the Ship Class.
+        NewScoreboard.getShipHits(); 
               
       
         // Creating new instances of each ship. Christian.
@@ -158,13 +162,8 @@ public class Battleship260_05 {
         newGame.getTotalDamage(12, 0);
         newGame.getTotalDamage(25, 17);
         
-        /** Daniel Diaz Homework: Create a new instance of the class in the main( )  function of the main class 
-    *   and call the display functions to list the values of the variables in the main ( ) funciton.
-    */    
+    
         
-        ScoreBoard NewScoreboard = new ScoreBoard ("Joe Black",3, 2, 3, 1, 4, 2, "Sue Red", 5, 1, 2);
-        
-        NewScoreboard.getInfo(); 
     }
     public void getName()    {
         Scanner input = new Scanner(System.in);
