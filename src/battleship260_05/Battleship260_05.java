@@ -37,42 +37,20 @@ public class Battleship260_05 {
         System.out.println(player2.getName());
         System.out.println(player2.getColor());
     }
-    
-    // Paired Programming Assignment Lesson 3
-    int hits;
-    int misses;
-    
-    void getPlayerAccuracy(int hits, int misses) {
-        if (hits < 0) {
-            System.out.println("Invalid number of hits\n");
-            return;
-        }
-        if (misses < 0) {
-            System.out.println("Invalid number of misses\n");
-            return;
-        }
-        int totalShots = hits + misses;
-        double playerAccuracy =  (((double)hits * 100) / (double)totalShots);
-        DecimalFormat df = new DecimalFormat("#.##");
-        System.out.println("Player Accuracy:\t" + df.format(playerAccuracy) + "%\n");
-    }
-    
-    //Logan's week 3 individual assignment
-    void getTotalDamage(int hits, int totalShipsLength ){
-        if (totalShipsLength < 1) {
-            System.out.println("Invalid length of all ships\n");
-            return;
-        }
-        if (hits < 0 || hits > totalShipsLength) {
-            System.out.println("Invalid number of hits\n");
-            return;
-        }
+    public void displayMenu(){
+        Menu menuDisp = new Menu();
+        Scanner option = new Scanner(System.in);
+        System.out.println(menuDisp.menuDisp()); 
+        System.out.println("Select an option:");
+        this.choice = Integer.parseInt(option.next());
+        
+        //Wendell - Individual Assignment 3
+       // Menu getSuggest = new Menu();
+        //System.out.println("This is my average guess :");
+        System.out.println("This is my average guess: " + menuDisp.getSuggest());
+        //System.out.println("The average random guess is : " + getSuggest.averageGuess);
 
-        double totalDamage =  ((double)hits / (double)totalShipsLength) * 100;
-        DecimalFormat df = new DecimalFormat("#.##");
-        System.out.println("Total Damage:\t" + df.format(totalDamage) + "%\n");
     }
-    //End Logan's week 3 individual assignment
     
     public static void main(String[] args) {
                 
@@ -86,7 +64,7 @@ public class Battleship260_05 {
     *   and call the display functions to list the values of the variables in the main ( ) funciton.
     */    
         
-        ScoreBoard NewGame = new ScoreBoard ("Joe Black", 5, 4, 3, 2, 3, "Sue Red", 5, 1, 2);
+        ScoreBoard NewGame = new ScoreBoard ("Joe Black", 5, 4, 1, 3, 2, 3, "Sue Red", 5, 1, 2);
         
         NewGame.getInfo();       
       
@@ -168,13 +146,13 @@ public class Battleship260_05 {
         
         NewGame.getInfo(); 
     }
+    
+    // Paired Programming Assignment Lesson 2
     public void getName()    {
         Scanner input = new Scanner(System.in);
         System.out.println("Enter Your name: ");
         this.name = input.next();
     }
-    
-    
     public void displayHelp()   {
         Rules setupRules = new Rules();
         System.out.println("\n Welcome " + this.name + "\n");
@@ -187,19 +165,41 @@ public class Battleship260_05 {
         
         
     }
-    public void displayMenu(){
-        Menu menuDisp = new Menu();
-        Scanner option = new Scanner(System.in);
-        System.out.println(menuDisp.menuDisp()); 
-        System.out.println("Select an option:");
-        this.choice = Integer.parseInt(option.next());
-        
-        //Wendell - Individual Assignment 3
-       // Menu getSuggest = new Menu();
-        //System.out.println("This is my average guess :");
-        System.out.println("This is my average guess: " + menuDisp.getSuggest());
-        //System.out.println("The average random guess is : " + getSuggest.averageGuess);
-
+    // End Lesson 2 Assignment
+    
+    // Paired Programming Assignment Lesson 3
+    int hits;
+    int misses;
+    void getPlayerAccuracy(int hits, int misses) {
+        if (hits < 0) {
+            System.out.println("Invalid number of hits\n");
+            return;
+        }
+        if (misses < 0) {
+            System.out.println("Invalid number of misses\n");
+            return;
+        }
+        int totalShots = hits + misses;
+        double playerAccuracy =  (((double)hits * 100) / (double)totalShots);
+        DecimalFormat df = new DecimalFormat("#.##");
+        System.out.println("Player Accuracy:\t" + df.format(playerAccuracy) + "%\n");
     }
-     
+    // End Lesson 3 Assignment
+    
+    //Logan's week 3 individual assignment
+    void getTotalDamage(int hits, int totalShipsLength ){
+        if (totalShipsLength < 1) {
+            System.out.println("Invalid length of all ships\n");
+            return;
+        }
+        if (hits < 0 || hits > totalShipsLength) {
+            System.out.println("Invalid number of hits\n");
+            return;
+        }
+
+        double totalDamage =  ((double)hits / (double)totalShipsLength) * 100;
+        DecimalFormat df = new DecimalFormat("#.##");
+        System.out.println("Total Damage:\t" + df.format(totalDamage) + "%\n");
+    }
+    //End Logan's week 3 individual assignment
 }
