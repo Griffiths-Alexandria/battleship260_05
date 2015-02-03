@@ -37,6 +37,7 @@ public class Battleship260_05 {
            + "Additional instructions will be added later..\n"
            + "Good Luck!"; 
     String page; 
+    String japan = "おはようございます";
     
     void showPlayerOne() {
         System.out.println(player1.getName());
