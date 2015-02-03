@@ -63,10 +63,12 @@ public class Battleship260_05 {
     /** Daniel Diaz Homework: Create a new instance of the class in the main( )  function of the main class 
     *   and call the display functions to list the values of the variables in the main ( ) funciton.
     */    
-        
-        ScoreBoard NewGame = new ScoreBoard ("Joe Black", 5, 4, 1, 3, 2, 3, "Sue Red", 5, 1, 2);
-        
-        NewGame.getInfo();       
+        ScoreBoard NewScoreboard = new ScoreBoard ("* Joe Black *", 11, 3, 5, 0, 27.28 , "\n* Sue Red *", 10, 5, 50.00);
+        NewScoreboard.getInfo();
+    
+    //  Displaying the hits by ship in a different way, I will be expecting the data from the Ship Class.
+        NewScoreboard.getShipHits(); 
+              
       
         // Creating new instances of each ship. Christian.
         Ship Submarine = new Ship("Submarine", "A 3-Space Ship", 3);
@@ -138,13 +140,8 @@ public class Battleship260_05 {
         newGame.getTotalDamage(12, 0);
         newGame.getTotalDamage(25, 17);
         
-        /** Daniel Diaz Homework: Create a new instance of the class in the main( )  function of the main class 
-    *   and call the display functions to list the values of the variables in the main ( ) funciton.
-    */    
+    
         
-        ScoreBoard NewScoreboard = new ScoreBoard ("Joe Black",3, 2, 3, 1, 4, 2, "Sue Red", 5, 1, 2);
-        
-        NewGame.getInfo(); 
     }
     
     // Paired Programming Assignment Lesson 2
@@ -153,6 +150,7 @@ public class Battleship260_05 {
         System.out.println("Enter Your name: ");
         this.name = input.next();
     }
+
     public void displayHelp()   {
         Rules setupRules = new Rules();
         System.out.println("\n Welcome " + this.name + "\n");
@@ -162,8 +160,6 @@ public class Battleship260_05 {
         System.out.println("Do you wish to continue? Type Y/N \n"
                 + "For Main Menu, type M:"); 
         this.page = answer.nextLine(); 
-        
-        
     }
     // End Lesson 2 Assignment
     

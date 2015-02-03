@@ -27,7 +27,7 @@ public class Ship {
     }
     
     //Stuff for Individual Assignment
-    Random coin = new Random();
+    Random coin = new Random(); //The random operator works great! I will try to use it on my class next time, cool.
     int result;
     
     void hitReduction() {
