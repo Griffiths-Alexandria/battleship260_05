@@ -5,6 +5,15 @@ package battleship260_05;
  *
  * @author Logan Work
  */
+
+//Sue Francis testing
+//Alex Griffiths was here testing this out
+//Christian Molina, testing through NetBeans as well
+//Rachel Yancey here and tested
+//Wendell Tanner - Test
+//Daniel Diaz was here
+//Sterling Miller was here
+
 import java.util.Scanner;
 import java.text.*;
 
@@ -68,8 +77,7 @@ public class Battleship260_05 {
     
     //  Displaying the hits by ship in a different way, I will be expecting the data from the Ship Class.
         NewScoreboard.getShipHits(); 
-              
-      
+        
         // Creating new instances of each ship. Christian.
         Ship Submarine = new Ship("Submarine", "A 3-Space Ship", 3);
         Ship Carrier = new Ship("Aircraft Carrier", "A 5-Space Ship", 5);
@@ -83,21 +91,6 @@ public class Battleship260_05 {
         Patrol.getInfo();
         Battleship.getInfo();
         Destroyer.getInfo();
-        
-        Patrol.hitReduction();
-        Patrol.hitReduction();
-        Patrol.hitReduction();
-        Patrol.hitReduction();
-        Patrol.hitReduction();
-        
-        //Sue Francis testing
-        //Alex Griffiths was here testing this out
-        //Christian Molina, testing through NetBeans as well
-        //Rachel Yancey here and tested
-        //Wendell Tanner - Test
-        //Daniel Diaz was here
-        //Sterling Miller was here
-           
         
         Battleship260_05 myGame = new Battleship260_05();
         myGame.getName();
@@ -120,28 +113,29 @@ public class Battleship260_05 {
         //Pass the Board information back to the View
         newBoard.displayBoard(boardInfo);
         
-    
-        
         // Menu_temp stuff
         menu_temp newMenu = new menu_temp("NEW GAME");
         newMenu.titleShow();
         newMenu.menuShow();
-        
-        // TODO code application logic here
         
         //Paired Programming Assignment Lesson 3
         newGame.getPlayerAccuracy(5, 8);
         newGame.getPlayerAccuracy(-1, 6);
         newGame.getPlayerAccuracy(5, -1);
         
+        // Lesson 3 Individual : Christian
+        Patrol.hitReduction();
+        Patrol.hitReduction();
+        Patrol.hitReduction();
+        Patrol.hitReduction();
+        Patrol.hitReduction();
+        
         //Logan's test for Individual Assignment - Lesson 3
         newGame.getTotalDamage(5, 17);
         newGame.getTotalDamage(-1, 17);
         newGame.getTotalDamage(12, 0);
         newGame.getTotalDamage(25, 17);
-        
-    
-        
+        // End Lesson 3
     }
     
     // Paired Programming Assignment Lesson 2
@@ -150,7 +144,6 @@ public class Battleship260_05 {
         System.out.println("Enter Your name: ");
         this.name = input.next();
     }
-
     public void displayHelp()   {
         Rules setupRules = new Rules();
         System.out.println("\n Welcome " + this.name + "\n");
