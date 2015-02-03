@@ -2,72 +2,40 @@
 package battleship260_05;
 
 /**
- *
  * @author Logan Work
  */
-
-//Sue Francis testing
-//Alex Griffiths was here testing this out
-//Christian Molina, testing through NetBeans as well
-//Rachel Yancey here and tested
-//Wendell Tanner - Test
-//Daniel Diaz was here
-//Sterling Miller was here
 
 import java.util.Scanner;
 import java.text.*;
 
 public class Battleship260_05 {
-
-    /**
-     * @param args the command line arguments
-     */
-    Player player1 = new Player("Joe","black");
-    Player player2 = new Player("Lucy","red");
     
-    //These are our 2 instance variables
+    // VARIABLE DECLARATIONS
     String name;
     int choice;
     
-    String instructions = "Welcome to the game of Battleship! \n\n"
+    String page; 
+    String japan = "おはようございます";
+    
+    Player player1 = new Player("Joe","black");
+    Player player2 = new Player("Lucy","red");
+    
+    //I don't think we are using these anywhere.
+    /*String instructions = "Welcome to the game of Battleship! \n\n"
            + "Player 1 and Player 2 will be competing with each other. \n"
-           + "Each Player will be given the oppurtunity to hid their ships. \n"
+           + "Each Player will be given the oppurtunity to hide their ships. \n"
            + "While hiding your ships the opposite player must be honest and look away. \n"
            + "After you have completed your turn the next player will have to enter [n] to view his/or her board."
            + "Additional instructions will be added later..\n"
            + "Good Luck!"; 
-    String page; 
-    String japan = "おはようございます";
+    */
     
-    void showPlayerOne() {
-        System.out.println(player1.getName());
-        System.out.println(player1.getColor());
-    }
-    void showPlayerTwo() {
-        System.out.println(player2.getName());
-        System.out.println(player2.getColor());
-    }
-    public void displayMenu(){
-        Menu menuDisp = new Menu();
-        Scanner option = new Scanner(System.in);
-        System.out.println(menuDisp.menuDisp()); 
-        System.out.println("Select an option:");
-        this.choice = Integer.parseInt(option.next());
-        
-        //Wendell - Individual Assignment 3
-       // Menu getSuggest = new Menu();
-        //System.out.println("This is my average guess :");
-        System.out.println("This is my average guess: " + menuDisp.getSuggest());
-        //System.out.println("The average random guess is : " + getSuggest.averageGuess);
-
-    }
-    
+    // MAIN METHOD
     public static void main(String[] args) {
                 
-        Battleship260_05 newGame = new Battleship260_05();
+        Battleship260_05 newGame = new Battleship260_05(); // New instance of main class.
         
         newGame.showPlayerOne();
-        
         newGame.showPlayerTwo();
         
     /** Daniel Diaz Homework: Create a new instance of the class in the main( )  function of the main class 
@@ -192,4 +160,26 @@ public class Battleship260_05 {
         System.out.println("Total Damage:\t" + df.format(totalDamage) + "%\n");
     }
     //End Logan's week 3 individual assignment
+    void showPlayerOne() {
+        System.out.println(player1.getName());
+        System.out.println(player1.getColor());
+    }
+    void showPlayerTwo() {
+        System.out.println(player2.getName());
+        System.out.println(player2.getColor());
+    }
+    public void displayMenu(){
+        Menu menuDisp = new Menu();
+        Scanner option = new Scanner(System.in);
+        System.out.println(menuDisp.menuDisp()); 
+        System.out.println("Select an option:");
+        this.choice = Integer.parseInt(option.next());
+        
+        //Wendell - Individual Assignment 3
+        //Menu getSuggest = new Menu();
+        //System.out.println("This is my average guess :");
+        System.out.println("This is my average guess: " + menuDisp.getSuggest());
+        //System.out.println("The average random guess is : " + getSuggest.averageGuess);
+
+    }
 }
