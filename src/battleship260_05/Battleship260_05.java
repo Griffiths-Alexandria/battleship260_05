@@ -38,13 +38,13 @@ public class Battleship260_05 {
         newGame.showPlayerOne();
         newGame.showPlayerTwo();
         
-    /** Daniel Diaz Homework: Create a new instance of the class in the main( )  function of the main class 
-    *   and call the display functions to list the values of the variables in the main ( ) funciton.
-    */    
+        /*  Daniel Diaz Homework: Create a new instance of the class in the main( )  function of the main class 
+        *   and call the display functions to list the values of the variables in the main ( ) funciton.
+        */    
         ScoreBoard NewScoreboard = new ScoreBoard ("* Joe Black *", 11, 3, 5, 0, 27.28 , "\n* Sue Red *", 10, 5, 50.00);
         NewScoreboard.getInfo();
     
-    //  Displaying the hits by ship in a different way, I will be expecting the data from the Ship Class.
+        //  Displaying the hits by ship in a different way, I will be expecting the data from the Ship Class.
         NewScoreboard.getShipHits(); 
         
         // Creating new instances of each ship. Christian.
@@ -66,28 +66,27 @@ public class Battleship260_05 {
         myGame.displayHelp();
         myGame.displayMenu();
 
-        //For now I am treating this main class as the controller. Below I will
-        //create a board from a size input from the BoardView, which I will pass to
-        //the BoardModel. The Model will then return the grid values to the View, 
-        //and the view will display it to the user.
-        //Bring in the Board View and get the size from the user
-        BoardView newBoard = new BoardView();
-        int boardSize = newBoard.getBoardSize();
+        //START 
+        //To allow BoardView and BoardModel to interact, for now I am treating this main class as the controller. Logan
         
-        //Bring in the Board Model, which requires a size and
-        //a mode(setup = true, gameplay = false)
-        BoardModel boardData = new BoardModel(boardSize, true);
-        String[][] boardInfo = boardData.getNewBoard();
+        //Bring in the Board View and get the size from the user
+        BoardView newBoard = new BoardView(); //New instance of a BoardView object.
+        int boardSize = newBoard.getBoardSize(); //Call method to allow user to input board size.
+        
+        //Bring in the Board Model, which requires a size and a mode(setup = true, gameplay = false)
+        BoardModel boardData = new BoardModel(boardSize, true); //New instance of BoardModel object, passed boardSize from input above.
+        String[][] boardInfo = boardData.getNewBoard(); //The data model for the board (a two-dim String array) is created and stored in boardInfo.
         
         //Pass the Board information back to the View
-        newBoard.displayBoard(boardInfo);
+        newBoard.displayBoard(boardInfo); //Display the board to the user.
         
         // Menu_temp stuff
         menu_temp newMenu = new menu_temp("NEW GAME");
         newMenu.titleShow();
         newMenu.menuShow();
         
-        //Paired Programming Assignment Lesson 3
+        // LESSON 3 CODE
+        // Paired Programming Assignment Lesson 3
         newGame.getPlayerAccuracy(5, 8);
         newGame.getPlayerAccuracy(-1, 6);
         newGame.getPlayerAccuracy(5, -1);
@@ -104,7 +103,7 @@ public class Battleship260_05 {
         newGame.getTotalDamage(-1, 17);
         newGame.getTotalDamage(12, 0);
         newGame.getTotalDamage(25, 17);
-        // End Lesson 3
+        // END LESSON 3 CODE
     }
     
     // Paired Programming Assignment Lesson 2
