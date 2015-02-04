@@ -61,9 +61,9 @@ public class MainMenuView {
     }
     
     public final void display(){
-            System.out.println("\n**************************************************************");
-            System.out.println("**                       MAIN    MENU                       **");
-            System.out.println("**************************************************************\n");
+            System.out.println("\n**********************************************************************");
+            System.out.println("**                          MAIN    MENU                            **");
+            System.out.println("**********************************************************************\n");
             
             for (int i = 0;i < MainMenuView.menuItems.length;i++){
                 System.out.println("\t" + menuItems[i][0] + " " + menuItems[i][1] + "\n");
