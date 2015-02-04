@@ -39,22 +39,22 @@ public class MainMenuView {
             
             switch (command) {
                 case "1"://NEW GAME
-                    this.mainMenuControl.playerSelect();
+                    this.mainMenuControl.displayPSelectMenu();
                     break;
                 case "2"://OPTIONS
-                    this.mainMenuControl.displayOptionMenu();
+                    this.mainMenuControl.displayOptionsMenu();
                     break;
                 case "3"://RULES
-                    this.mainMenuControl.displayRules();
+                    this.mainMenuControl.displayRulesMenu();
                     break;
                 case "4"://Credits
-                    this.mainMenuControl.displayCredits();
+                    this.mainMenuControl.displayCreditsMenu();
                     break;
                 case "5"://Exit
                     break;    
                 default: 
                     new BattleshipError().displayError("Invalid command. Please enter a valid command.");
-                    continue;    
+                    //continue;    
             }
         } while(!command.equals("5"));
         

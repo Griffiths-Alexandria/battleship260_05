@@ -35,6 +35,10 @@ public class Battleship260_05 {
                 
         Battleship260_05 newGame = new Battleship260_05(); // New instance of main class.
         
+        //Call the Main Menu View
+        MainMenuView mainMenuView = new MainMenuView();
+        mainMenuView.getInput();
+        
         newGame.showPlayerOne();
         newGame.showPlayerTwo();
         

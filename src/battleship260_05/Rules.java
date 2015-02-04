@@ -38,7 +38,7 @@ public class Rules {
     //End Individual Assignment 3 
     
     String instructions = "This is Battleship!!\n\n"
-            + "You will be playing against your frieind. \n\n"
+            + "You will be playing against your friend. \n\n"
             + "Here is where I will put the official rules. \n\n"
             +"Good Luck! \n\n"; 
       
