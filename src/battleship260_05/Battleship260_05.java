@@ -9,6 +9,10 @@ import java.util.Scanner;
 import java.text.*;
 
 public class Battleship260_05 {
+
+    private static RulesMenuView RulesMenuView() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
     // VARIABLE DECLARATIONS
     String name;
@@ -38,9 +42,24 @@ public class Battleship260_05 {
         new BattleshipArt().displayShip();
         new BattleshipArt().displayTitle();
         
+        //Temporary Test of Game Art
+        new BattleshipArt().displayBattle();
+        new BattleshipArt().displayHit();
+        new BattleshipArt().displayMiss();
+        new BattleshipArt().displaySunk();
+        
+        
         //Call the Main Menu View
         MainMenuView mainMenuView = new MainMenuView();
         mainMenuView.getInput();
+        
+        
+        //Call the Rules Menu View  ALEX 
+       RulesMenuView rulesMenuView = new RulesMenuView(); 
+       rulesMenuView.getInput(); 
+        
+        
+        
         
         newGame.showPlayerOne();
         newGame.showPlayerTwo();
@@ -124,10 +143,7 @@ public class Battleship260_05 {
         System.out.println("\n Welcome " + this.name + "\n");
         System.out.println(setupRules.getRules());
         
-        Scanner answer = new Scanner(System.in); 
-        System.out.println("Do you wish to continue? Type Y/N \n"
-                + "For Main Menu, type M:"); 
-        this.page = answer.nextLine(); 
+         
     }
     // End Lesson 2 Assignment
     

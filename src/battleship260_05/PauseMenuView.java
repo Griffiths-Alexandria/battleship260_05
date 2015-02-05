@@ -12,6 +12,7 @@ import java.util.Scanner;
  * @author griffiths
  */
 public class PauseMenuView {
+    
     private PauseMenuControl PauseMenuControl ;   
     
     
@@ -53,11 +54,11 @@ public class PauseMenuView {
                     break;
                 default: 
                     new BattleshipError().displayError("Invalid command. Please enter a valid command.");
-                    continue;    
+                      
             }
-        } while(!command.equals("3"));
+        } while(!command.equals("4"));
         
-        return; 
+        
     }
     
     public final void display(){
@@ -66,10 +67,9 @@ public class PauseMenuView {
             System.out.println("\t**********************************************************************\n");
             System.out.print("\n\nPlease Enter Your Choice: ");
             
-            for (int i = 0;i < PauseMenuView.pauseMenuItems.length;i++){
-                System.out.println("\t" + pauseMenuItems[i][0] + " " + pauseMenuItems[i][1] + "\n");
-                
-            }
+        for (String[] pauseMenuItem : PauseMenuView.pauseMenuItems) {
+            System.out.println("\t" + pauseMenuItem[0] + " " + pauseMenuItem[1] + "\n");
+        }
             System.out.println("**********************************************************************\n");
     }
 }

@@ -8,9 +8,9 @@ package battleship260_05;
 public class MainMenuControl {
     
     public void displayPSelectMenu(){
-        //PlayerMenuView playerMenu = new PlayerMenuView();
-        //optionMenu.getInput();
-        System.out.println("This will point to the Player Select Menu");
+        PlayerMenuView playerMenu = new PlayerMenuView();
+        playerMenu.getInput();
+        //System.out.println("This will point to the Player Select Menu");
     }
     public void displayOptionsMenu(){
         //OptionMenuView optionMenu = new OptionMenuView();
@@ -18,8 +18,8 @@ public class MainMenuControl {
         System.out.println("This will point to the Options Menu");
     }
     public void displayRulesMenu(){
-        Rules ruleMenu = new Rules();
-        System.out.println(ruleMenu.getRules());
+        RulesMenuView ruleMenu = new RulesMenuView();
+        ruleMenu.getInput(); 
     }
     public void displayCreditsMenu(){
         //CreditMenuView creditMenu = new CreditMenuView();
