@@ -10,9 +10,8 @@ import java.text.*;
 
 public class Battleship260_05 {
 
-    private static RulesMenuView RulesMenuView() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+    
+  
     
     // VARIABLE DECLARATIONS
     String name;
@@ -53,10 +52,7 @@ public class Battleship260_05 {
         MainMenuView mainMenuView = new MainMenuView();
         mainMenuView.getInput();
         
-        
-        //Call the Rules Menu View  ALEX 
-       RulesMenuView rulesMenuView = new RulesMenuView(); 
-       rulesMenuView.getInput(); 
+      
         
         
         
