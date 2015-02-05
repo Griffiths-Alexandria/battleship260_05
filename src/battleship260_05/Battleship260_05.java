@@ -42,6 +42,13 @@ public class Battleship260_05 {
         new BattleshipArt().displayShip();
         new BattleshipArt().displayTitle();
         
+        //Temporary Test of Game Art
+        new BattleshipArt().displayBattle();
+        new BattleshipArt().displayHit();
+        new BattleshipArt().displayMiss();
+        new BattleshipArt().displaySunk();
+        
+        
         //Call the Main Menu View
         MainMenuView mainMenuView = new MainMenuView();
         mainMenuView.getInput();

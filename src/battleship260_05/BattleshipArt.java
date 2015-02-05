@@ -22,41 +22,54 @@ public class BattleshipArt {
         return null;
     }
     
-    public Object displayBattle(Object object){
-        String message = (String) object;
-        System.out.println("\n!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
-        System.out.println("ERROR: " + message);
-        System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n");
+    public Object displayBattle(){
+        System.out.println("**********************************************************************");
+        System.out.println("**********************************************************************");
+        System.out.println("**                                                                  **");
+        System.out.println("**    BBBB      AA    TTTTTT  TTTTTT  LL      EEEEEE   ##    ##     **");
+        System.out.println("**    BB  B    AA A     TT      TT    LL      EE      ####  ####    **");
+        System.out.println("**    BBBBB   AA   A    TT      TT    LL      EEEE     ##    ##     **");
+        System.out.println("**    BB   B  AAAAAA    TT      TT    LL      EE       ##    ##     **");
+        System.out.println("**    BB   B  AA   A    TT      TT    LL   L  EE                    **");
+        System.out.println("**    BBBBB   AA   A    TT      TT    LLLLLL  EEEEEE   ##    ##     **");
+        System.out.println("**                                                                  **");
+        System.out.println("**********************************************************************");
+        System.out.println("**********************************************************************\n");
         return null;
     }
     public Object displayShip(){
-        System.out.println("\n                            ||_");
-        System.out.println("                         \\_/   |    ||");
-        System.out.println("     ,         \\_  \\_  _/=      \\_=====_|___");
-        System.out.println("     \\`--------===-===’                     |_==./__.._____.===--/");
-        System.out.println("      \\________________________________________________________/\n");
+        System.out.println("\n                            ||_                ");
+        System.out.println("                         \\_/   |    ||          ");
+        System.out.println("     ,         \\_  \\_  _/=      \\_=====_|___  ");
+        System.out.println("     \\`--------===-==='                     |_==./__.._____.===--/");
+        System.out.println("      \\_________________________________________________________/\n");
         return null;
     }
-    public Object displayMiss(Object object){
-        String message = (String) object;
-        System.out.println("\n**************************************************************");
-        System.out.println("\n!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
-        System.out.println("ERROR: " + message);
-        System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n");
+    public Object displayMiss(){
+        System.out.println("                                    .:  ");
+        System.out.println("                                  .:#'  ");
+        System.out.println("                                 :###'  ");
+        System.out.println(",(   ,(   ,(   ,(   ,(   ,(   ,( /\"/   ,(   ,(   ,(   ,(   ,(   ,(   ,");
+        System.out.println("$$`-'$$`-'$$`-'$$`-'$$`-'$$`-'$$/ /$`='$$`-'$$`='$$`='$$`='$$`='$$`='$");
+        System.out.println("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$/ /$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$\n");
         return null;
     }
-    public Object displayHit(Object object){
-        String message = (String) object;
-        System.out.println("\n!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
-        System.out.println("ERROR: " + message);
-        System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n");
+    public Object displayHit(){
+        System.out.println("                                                 ,@@@.          ");
+        System.out.println("                             ||_               ,@####@.         ");
+        System.out.println("                          \\_/   |    ||     \\. @######@ ,/    ");
+        System.out.println("      ,         \\_  \\_  _/=      \\_=====_|___\\\\.`@##@',//  ");
+        System.out.println("      \\`--------===-==='                    |_\\\\\\\\##////___.===--/  ");
+        System.out.println("       \\________________________________________________________/\n");
         return null;
     }
-    public Object displaySunk(Object object){
-        String message = (String) object;
-        System.out.println("\n!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
-        System.out.println("ERROR: " + message);
-        System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n");
+    public Object displaySunk(){
+        System.out.println("                            /|        .:.--'       )  ");
+        System.out.println("                           /  \\     .:#' .__.'._.-'  ");
+        System.out.println("                          /    \\  :####:/            ");
+        System.out.println(",(   ,(   ,(   ,(   ,(   ,\\     \\(#####,(   ,(   ,(   ,(   ,(   ,(   ,");
+        System.out.println("$$`-'$$`-'$$`-'$$`-'$$`-'$$\\     \\####'$$`='$$`='$$`='$$`='$$`='$$`='$");
+        System.out.println("$$$$$$$$$$$$$$$$$$$$$$$$$$$$\\     \\#$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$\n");
         return null;
     }
 }
