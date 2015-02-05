@@ -19,7 +19,7 @@ public class MainMenuControl {
     }
     public void displayRulesMenu(){
         RulesMenuView ruleMenu = new RulesMenuView();
-        ruleMenu.getInput();
+        ruleMenu.getInput(); 
     }
     public void displayCreditsMenu(){
         //CreditMenuView creditMenu = new CreditMenuView();

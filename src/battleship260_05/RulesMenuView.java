@@ -83,21 +83,20 @@ public class RulesMenuView {
                     new BattleshipError().displayError("Invalid command. Please enter a valid command.");
                        
             }
-        } while(!command.equals("10"));
+        } while(!command.equals("9"));
         
        
     }
     
     public final void display(){
             System.out.println("\n**********************************************************************");
-            System.out.println("\t**                           RULES MENU                             **");
-            System.out.println("\t**********************************************************************\n");
-            
-            System.out.print("\n\nPlease Enter Your Choice: ");
+            System.out.println("**                            RULES  MENU                           **");
+            System.out.println("**********************************************************************\n");
             
         for (String[] RulesMenuItem : RulesMenuView.RulesMenuItems) {
             System.out.println("\t" + RulesMenuItem[0] + " " + RulesMenuItem[1] + "\n");
         }
-            System.out.println("**********************************************************************\n");
+        System.out.print("\n Please Enter Your Choice: ");    
+        
     }
 }
