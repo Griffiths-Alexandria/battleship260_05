@@ -12,17 +12,22 @@ import java.util.Scanner;
  * @author griffiths
  */
 public class PauseMenuView {
-       private final static String[][] menuItems = {
+    private Pause pause;
+    private PauseMenuControl PauseMenuControl ;   
+    
+    
+    private final static String[][] menuItems = {
         {"1.", "BACK TO GAME"},
         {"2.", "SURRENDER"},
         {"3.", "EXIT GAME"},
          };
-    PauseMenuControl PauseMenuControl = new PauseMenuControl();
+   
+    //Default constructor
+    public PauseMenuView(Pause pause)
+    this.PauseMenuControl = new PauseMenuControl();
     
-    //Default contructor
-    public MainMenuView(){
-        
-    }
+
+  
     
     public void getInput(){
         
