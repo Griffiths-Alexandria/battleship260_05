@@ -55,12 +55,13 @@ public class BattleshipArt {
         return null;
     }
     public Object displayHit(){
-        System.out.println("                                                 ,@@@.          ");
-        System.out.println("                             ||_               ,@####@.         ");
-        System.out.println("                          \\_/   |    ||     \\. @######@ ,/    ");
-        System.out.println("      ,         \\_  \\_  _/=      \\_=====_|___\\\\.`@##@',//  ");
-        System.out.println("      \\`--------===-==='                    |_\\\\\\\\##////___.===--/  ");
-        System.out.println("       \\________________________________________________________/\n");
+        System.out.println("                                                ,@@@.          ");
+        System.out.println("                            ||_               ,@####@.         ");
+        System.out.println("                         \\_/   |    ||     \\. @######@ ,/    ");
+        System.out.println("     ,         \\_  \\_  _/=      \\_=====_|___\\\\.`@##@',//  ");
+        System.out.println("     \\`--------===-==='                    |_\\\\\\\\##////___.===--/");
+        System.out.println(",(   ,(___,(___,(___,(___,(___,(___,(___,(___,(___,(___,(___,(_/ ,(   ");
+        System.out.println("$$`-'$$`-'$$`-'$$`-'$$`-'$$`-'$$`-'$$`-'$$`-'$$`-'$$`-'$$`-'$$`-'$$`-'\n");
         return null;
     }
     public Object displaySunk(){
