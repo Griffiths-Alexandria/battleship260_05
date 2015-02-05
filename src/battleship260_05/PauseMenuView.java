@@ -49,10 +49,11 @@ public class PauseMenuView {
                     break;
                 default: 
                     new BattleshipError().displayError("Invalid command. Please enter a valid command.");
-                    //continue;    
+                    continue;    
             }
         } while(!command.equals("3"));
         
+        return; 
     }
     
     public final void display(){
