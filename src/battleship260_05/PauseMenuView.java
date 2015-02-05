@@ -41,13 +41,13 @@ public class PauseMenuView {
             
             switch (command) {
                 case "1"://BACK TO GAME
-                    this.PauseMenuControl.displayBacktogame();
+                    this.PauseMenuControl.goBacktoGame();
                     break;
                 case "2"://SURRENDER
                     this.PauseMenuControl.displaySurrender();
                     break;
                 case "3"://EXIT GAME
-                    this.PauseMenuControl.displayExitgame();
+                    this.PauseMenuControl.Exitgame();
                     break;
                 case "4"://END
                     break;
