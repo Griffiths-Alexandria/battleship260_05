@@ -8,8 +8,8 @@ package battleship260_05;
 public class MainMenuControl {
     
     public void displayPSelectMenu(){
-        //PlayerMenuView playerMenu = new PlayerMenuView();
-        //optionMenu.getInput();
+        PlayerMenuView playerMenu = new PlayerMenuView();
+        playerMenu.getInput();
         System.out.println("This will point to the Player Select Menu");
     }
     public void displayOptionsMenu(){
