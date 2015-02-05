@@ -10,7 +10,7 @@ public class MainMenuControl {
     public void displayPSelectMenu(){
         PlayerMenuView playerMenu = new PlayerMenuView();
         playerMenu.getInput();
-        System.out.println("This will point to the Player Select Menu");
+        //System.out.println("This will point to the Player Select Menu");
     }
     public void displayOptionsMenu(){
         //OptionMenuView optionMenu = new OptionMenuView();
