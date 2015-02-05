@@ -63,14 +63,14 @@ public class PauseMenuView {
     
     public final void display(){
             System.out.println("\n**********************************************************************");
-            System.out.println("**                           PAUSE  MENU                              **");
-            System.out.println("**********************************************************************\n");
+            System.out.println("\t**                           PAUSE  MENU                              **");
+            System.out.println("\t**********************************************************************\n");
+            System.out.print("\n\nPlease Enter Your Choice: ");
             
             for (int i = 0;i < MainMenuView.menuItems.length;i++){
                 System.out.println("\t" + menuItems[i][0] + " " + menuItems[i][1] + "\n");
                 
             }
-            System.out.println();
-            System.out.print("Please Enter Your Choice: ");
+            System.out.println("**********************************************************************\n");
     }
 }
