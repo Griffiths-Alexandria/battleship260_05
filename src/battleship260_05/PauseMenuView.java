@@ -12,20 +12,19 @@ import java.util.Scanner;
  * @author griffiths
  */
 public class PauseMenuView {
-    private Pause pause;
     private PauseMenuControl PauseMenuControl ;   
     
     
-    private final static String[][] menuItems = {
+    private final static String[][] pauseMenuItems = {
         {"1.", "BACK TO GAME"},
         {"2.", "SURRENDER"},
         {"3.", "EXIT GAME"},
          };
    
     //Default constructor
-    public PauseMenuView(Pause pause)
+    public PauseMenuView(){
     this.PauseMenuControl = new PauseMenuControl();
-    
+    }
 
   
     
@@ -50,7 +49,7 @@ public class PauseMenuView {
                 case "3"://EXIT GAME
                     this.PauseMenuControl.displayExitgame();
                     break;
-                case "4"://Credits
+                case "4"://END
                     break;
                 default: 
                     new BattleshipError().displayError("Invalid command. Please enter a valid command.");
@@ -67,8 +66,8 @@ public class PauseMenuView {
             System.out.println("\t**********************************************************************\n");
             System.out.print("\n\nPlease Enter Your Choice: ");
             
-            for (int i = 0;i < MainMenuView.menuItems.length;i++){
-                System.out.println("\t" + menuItems[i][0] + " " + menuItems[i][1] + "\n");
+            for (int i = 0;i < PauseMenuView.pauseMenuItems.length;i++){
+                System.out.println("\t" + pauseMenuItems[i][0] + " " + pauseMenuItems[i][1] + "\n");
                 
             }
             System.out.println("**********************************************************************\n");

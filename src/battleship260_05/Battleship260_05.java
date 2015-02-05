@@ -19,7 +19,7 @@ public class Battleship260_05 {
     Player player1 = new Player("Joe","black");
     Player player2 = new Player("Lucy","red");
     
-    //I don't think we are using these anywhere.
+    //I don't think we are using these anywhere. NO we are not, let's delete? 
     /*String instructions = "Welcome to the game of Battleship! \n\n"
            + "Player 1 and Player 2 will be competing with each other. \n"
            + "Each Player will be given the oppurtunity to hide their ships. \n"
