@@ -12,7 +12,8 @@ import java.util.Scanner;
  * @author griffiths
  */
 public class PauseMenuView {
-    /*private PauseMenuControl PauseMenuControl ;   
+    
+    private PauseMenuControl PauseMenuControl ;   
     
     
     private final static String[][] pauseMenuItems = {

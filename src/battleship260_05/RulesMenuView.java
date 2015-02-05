@@ -11,12 +11,12 @@ import java.util.Scanner;
  *
  * @author griffiths
  */
-public class RulesView {
+public class RulesMenuView {
+        
+    private RulesMenuControl rulesMenuControl;   
     
-    private Rules Rules;   
     
-    
-    private final static String[][] RulesItems = {
+    private final static String[][] RulesMenuItems = {
         {"1.", "PREPARE FOR BATTLE"},
         {"2.", "HOW TO PLAY"},
         {"3.", "CALL YOUR SHOT"}, 
@@ -28,15 +28,14 @@ public class RulesView {
         {"9.", "GO BACK TO MAIN MENU"}, 
         
          };
-   
-    // Create instance of the Rules (action) class
-    private Rules rules = new Rules(); 
-
-    //default constructor
-    public RulesView(){
     
+     public RulesMenuView(){
+    this.rulesMenuControl = new RulesMenuControl();
     }
     
+
+
+       
     //display the rules menu and get the users input selection
     public void getInput(){
         
@@ -52,31 +51,31 @@ public class RulesView {
             switch (command) {
                 
                 case "1"://Prepare Battle Scene
-                    this.Rules.displayPrepareBattle();
+                    this.rulesMenuControl.displayPrepareBattle();
                     break;
                 case "2"://How To Play
-                    this.Rules.displayHowToPlay();
+                    this.rulesMenuControl.displayHowToPlay();
                     break;
                 case "3"://Calling Shots
-                    this.Rules.displayCallShots();
+                    this.rulesMenuControl.displayCallShots();
                     break;
                 case "4"://Hit Rule
-                    this.Rules.displayItsAHit();
+                    this.rulesMenuControl.displayItsAHit();
                     break;
                 case "5"://Miss Rule
-                    this.Rules.displayItsAMiss();
+                    this.rulesMenuControl.displayItsAMiss();
                     break;
                 case "6"://Sinking Ship Rule
-                    this.Rules.displaySinkingShipRule();
+                    this.rulesMenuControl.displaySinkingShipRule();
                     break;
                 case "7"://Winning Game Rules
-                    this.Rules.displayWinningGame();
+                    this.rulesMenuControl.displayWinningGame();
                     break;
                 case "8"://Salvo Rules
-                    this.Rules.displaySalvoModeRules();
+                    this.rulesMenuControl.displaySalvoModeRules();
                     break;
                 case "9"://go back to main
-                    this.Rules.goBackToMain();
+                    this.rulesMenuControl.goBackToMain();
                     break;
                 case "10":
                     break;
@@ -96,11 +95,9 @@ public class RulesView {
             
             System.out.print("\n\nPlease Enter Your Choice: ");
             
-        for (String[] RulesItem : RulesView.RulesItems) {
-            System.out.println("\t" + RulesItem[0] + " " + RulesItem[1] + "\n");
+        for (String[] RulesMenuItem : RulesMenuView.RulesMenuItems) {
+            System.out.println("\t" + RulesMenuItem[0] + " " + RulesMenuItem[1] + "\n");
         }
             System.out.println("**********************************************************************\n");
     }
 }
-
-
