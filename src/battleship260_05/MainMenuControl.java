@@ -18,8 +18,8 @@ public class MainMenuControl {
         System.out.println("This will point to the Options Menu");
     }
     public void displayRulesMenu(){
-        Rules ruleMenu = new Rules();
-        System.out.println(ruleMenu.getRules());
+        RulesMenuView ruleMenu = new RulesMenuView();
+        ruleMenu.getInput(); 
     }
     public void displayCreditsMenu(){
         //CreditMenuView creditMenu = new CreditMenuView();

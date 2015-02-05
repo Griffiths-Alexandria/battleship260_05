@@ -1,16 +1,20 @@
+
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package battleship260_05;
+//package battleship260_05;
 
-import java.util.Scanner;
+//import java.util.Scanner;
 
 /**
  *
  * @author griffiths
  */
+
+/*
 public class PauseMenuView {
     
     private PauseMenuControl PauseMenuControl ;   
@@ -21,8 +25,7 @@ public class PauseMenuView {
         {"2.", "SURRENDER"},
         {"3.", "EXIT GAME"},
          };
-   
-    //Default constructor
+  
     public PauseMenuView(){
     this.PauseMenuControl = new PauseMenuControl();
     }
@@ -72,4 +75,5 @@ public class PauseMenuView {
         }
             System.out.println("**********************************************************************\n");
     }
-}
+} 
+*/
