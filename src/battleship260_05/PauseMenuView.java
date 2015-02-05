@@ -12,7 +12,7 @@ import java.util.Scanner;
  * @author griffiths
  */
 public class PauseMenuView {
-    private PauseMenuControl PauseMenuControl ;   
+    /*private PauseMenuControl PauseMenuControl ;   
     
     
     private final static String[][] pauseMenuItems = {
@@ -70,5 +70,5 @@ public class PauseMenuView {
             System.out.println("\t" + pauseMenuItem[0] + " " + pauseMenuItem[1] + "\n");
         }
             System.out.println("**********************************************************************\n");
-    }
+    }*/
 }
