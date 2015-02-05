@@ -14,8 +14,7 @@ public class Battleship260_05 {
     String name;
     int choice;
     
-    String page; 
-    String japan = "おはようございます";
+    String page;
     
     Player player1 = new Player("Joe","black");
     Player player2 = new Player("Lucy","red");
