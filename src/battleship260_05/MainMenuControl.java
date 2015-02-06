@@ -26,4 +26,8 @@ public class MainMenuControl {
         //creditMenu.getCredits();
         System.out.println("This will point to the Dev Credits Menu");
     }
+    public void displayHelpMenu(){
+        HelpMenuView helpMenu = new HelpMenuView(); 
+        helpMenu.getInput();
+    }
 }
