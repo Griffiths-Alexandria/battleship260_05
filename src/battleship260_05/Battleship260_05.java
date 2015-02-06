@@ -42,10 +42,12 @@ public class Battleship260_05 {
         new BattleshipArt().displayTitle();
         
         //Temporary Test of Game Art
-        new BattleshipArt().displayBattle();
-        new BattleshipArt().displayHit();
-        new BattleshipArt().displayMiss();
-        new BattleshipArt().displaySunk();
+        /*
+         * new BattleshipArt().displayBattle();
+         * new BattleshipArt().displayHit();
+         * new BattleshipArt().displayMiss();
+         * new BattleshipArt().displaySunk();
+         */
         
         
         //Call the Main Menu View
