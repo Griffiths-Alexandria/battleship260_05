@@ -13,21 +13,18 @@ import java.util.Scanner;
  */
 
 public class PauseMenuView {
-    
-    private PauseMenuControl PauseMenuControl ;   
-    
-    
     private final static String[][] pauseMenuItems = {
         {"1.", "BACK TO GAME"},
         {"2.", "SURRENDER"},
         {"3.", "EXIT GAME"},
-         };
+         
+    };
    
     //Default constructor
+    PauseMenuControl PauseMenuControl = new PauseMenuControl();
+    
     public PauseMenuView(){
-    this.PauseMenuControl = new PauseMenuControl();
     }
-
   
     
     public void getInput(){

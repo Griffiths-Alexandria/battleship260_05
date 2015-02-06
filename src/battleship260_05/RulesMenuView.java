@@ -12,10 +12,6 @@ import java.util.Scanner;
  * @author griffiths
  */
 public class RulesMenuView {
-        
-    private RulesMenuControl rulesMenuControl;   
-    
-    
     private final static String[][] RulesMenuItems = {
         {"1.", "PREPARE FOR BATTLE"},
         {"2.", "HOW TO PLAY"},
@@ -29,8 +25,11 @@ public class RulesMenuView {
         
          };
     
-     public RulesMenuView(){
-    this.rulesMenuControl = new RulesMenuControl();
+     
+    RulesMenuControl rulesMenuControl = new RulesMenuControl();
+    
+    public RulesMenuView(){
+        
     }
     
 
