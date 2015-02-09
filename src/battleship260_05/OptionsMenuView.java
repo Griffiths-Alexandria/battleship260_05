@@ -5,12 +5,14 @@
  */
 package battleship260_05;
 
+import java.util.Scanner;
+
 /**
  *
  * @author Sterling
  */
 public class OptionsMenuView {
-    private final static string[][] menuItems = {
+    private final static String[][] menuItems = {
         {"1.","Grid Size","Small","Medium","Large",":"},
         {"2.","Number of Ships","Low","Medium","High",":"},
         {"3.","Ship Identification","On/Off",":"},
@@ -18,7 +20,7 @@ public class OptionsMenuView {
         {"5.","Save Settings","Yes/No",":"},
         {"6.","Exit to Main Menu","Yes/No",":"}
     };
-   OptionsMenu OptionsMenu= new optionsMenu();
+   OptionsMenuControl OptionsMenu= new OptionsMenuControl();
 
    public OptionsMenuView(){
        
@@ -35,40 +37,38 @@ public class OptionsMenuView {
         
            switch (options) {
                case "1":
-                   this.OptionsMenu.gridSize();
+                   this.OptionsMenu.displayGridSize();
                    break;
                case "2":
-                   this.OptionsMenu.numShips();
+                   this.OptionsMenu.displayNumberOfShips();
                    break;    
                case "3":
-                   this.OptionsMenu.shipId();
+                   this.OptionsMenu.displayShipIdentification();
                    break;
                case "4":
-                   this.OptionsMenu.salvo();
+                   this.OptionsMenu.displaySalvoMode();
                    break;
                 case "5":
-                   this.OptionsMenu.save();
+                   this.OptionsMenu.displaySaveSettings();
                    break;
                 case "6":
-                   this.OptionsMenu.exitMainMenu();
+                   this.OptionsMenu.displayMainMenu();
                    break;
                 default:
-                    new optionsError().displayError("Invalid input");
+                    new BattleshipError().displayError("Invalid input");
                  
            } 
        }while (!options.equals("6"));
     }
     
    public final void display(){
-                System.out.println("\n**********************************************************************");
-                System.out.println("**                          OPTIONS  MENU                            **");
-                System.out.println("**********************************************************************\n");
-               
-    
-for (int i = 0;i < PlayerMenuView.menuItems.length;i++){
+        System.out.println("\n**********************************************************************");
+        System.out.println("**                          OPTIONS  MENU                            **");
+        System.out.println("**********************************************************************\n");
+        for (int i = 0;i < OptionsMenuView.menuItems.length;i++){
                     System.out.println("\t" + menuItems[i][0] + " " + menuItems[i][1] + "\n");
-
-}
-System.out.println();
-System.out.println("Please select option: ");
+        }
+        System.out.println();
+        System.out.println("Please select option: ");
    }
+}
