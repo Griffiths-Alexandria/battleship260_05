@@ -18,6 +18,11 @@ public class Player {
   int wins;
   int losses;
   
+  //Added these variables for Player DB testing (Logan)
+  int gameHits;
+  int gameMisses;
+  //END Player DB variables
+  
   Player(String name, String color){
       this.name = name;
       this.color = color;

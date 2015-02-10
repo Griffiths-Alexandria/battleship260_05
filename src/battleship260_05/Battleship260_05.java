@@ -5,6 +5,13 @@ package battleship260_05;
  * @author Logan Work
  */
 
+//Player DB import statements (LOGAN)
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.Statement;
+//END Player DB import statements
+
 import java.util.Scanner;
 import java.text.*;
 
@@ -34,7 +41,19 @@ public class Battleship260_05 {
     
     // MAIN METHOD
     public static void main(String[] args) {
-                
+        
+        //Player DB Variables (Logan)
+        try {
+            String host         = "jdbc:derby://localhost:1527/Battleship";
+            String userName     = "team";
+            String pwd          = "260-05";
+            Connection conDB    = DriverManager.getConnection(host, userName, pwd);
+        }
+        catch (SQLException err){
+            System.out.println( err.getMessage());
+        }
+        //End Player DB Variables
+        
         Battleship260_05 newGame = new Battleship260_05(); // New instance of main class.
         
         //Show the Game Banner and Title
