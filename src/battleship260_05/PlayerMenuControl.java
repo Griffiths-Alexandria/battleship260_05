@@ -22,8 +22,9 @@ public class PlayerMenuControl {
         // newGame.generateNew1PGame();
     }
     public void returntoPreviousMenu() {
-        MainMenuView mainMenu = new MainMenuView();
+        //MainMenuView mainMenu = new MainMenuView();
         System.out.println("Returning to previous menu...");
-        mainMenu.getInput();
+        //mainMenu.getInput();
+        return;
     }
 }
