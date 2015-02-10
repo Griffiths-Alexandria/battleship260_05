@@ -45,6 +45,7 @@ public class Battleship260_05 {
         
         shipPlacement test = new shipPlacement();
         //test.getCoordinates();
+        test.playerPlacement(test.createBoard());
         test.cpuPlacement(test.createBoard());
         
         
