@@ -5,6 +5,7 @@
  */
 package battleship260_05;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 /**
@@ -12,6 +13,8 @@ import java.util.Scanner;
  * @author Logan Work
  */
 public class NameMenuView {
+    
+    
     // Constant Menu Items
     private final static String[][] menuFunctions = {
         {"A.", "ADD PLAYER"},
@@ -20,7 +23,9 @@ public class NameMenuView {
         {"E.", "EDIT PLAYER NAME"}            
     };
     // Get names from DB
-    
+    DBConnect playerDB = new DBConnect();
+    ArrayList<String> playerList = playerDB.getNames();
+    String[] playerNames = playerList.toArray(new String[playerList.size()]);
     // Default Constructor
     public NameMenuView(){
         
@@ -28,7 +33,6 @@ public class NameMenuView {
     // Get user selection
     public void getInput(){
         
-        int x;
         String command;
         Scanner inFile = new Scanner(System.in);
         
@@ -39,14 +43,27 @@ public class NameMenuView {
             command = command.trim().toUpperCase();//need toUpperCase() for letter selections
             
             switch (command){
-                case "A":
+                case "1":
                         break;
                   
             }
         }while (!command.equals(' '));
     }
     // Display method to display the menu
-    public static void display(){
-        
+    public void display(){
+        System.out.println("\n**********************************************************************");
+            System.out.println("**                        PLAYER    SELECT                          **");
+            System.out.println("**********************************************************************\n");
+            Integer count = 1;
+            for (String player : playerNames){
+                System.out.println("\t" + count + ". " + player + "\n");
+            }
+            
+            for (int i = 0;i < NameMenuView.menuFunctions.length;i++){
+                System.out.println("\t" + menuFunctions[i][0] + " " + menuFunctions[i][1] + "\n");
+                
+            }
+            System.out.println();
+            System.out.print("Please Enter Your Choice: ");
     }
 }

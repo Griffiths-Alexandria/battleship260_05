@@ -13,9 +13,9 @@ public class MainMenuControl {
         //System.out.println("This will point to the Player Select Menu");
     }
     public void displayOptionsMenu(){
-        //OptionMenuView optionMenu = new OptionMenuView();
-        //optionMenu.getInput();
-        System.out.println("This will point to the Options Menu");
+        OptionsMenuView optionMenu = new OptionsMenuView();
+        optionMenu.getInput();
+        //System.out.println("This will point to the Options Menu");
     }
     public void displayRulesMenu(){
         RulesMenuView ruleMenu = new RulesMenuView();

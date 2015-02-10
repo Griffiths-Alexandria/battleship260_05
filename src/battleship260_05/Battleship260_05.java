@@ -46,8 +46,15 @@ public class Battleship260_05 {
         shipPlacement test = new shipPlacement();
         //test.getCoordinates();
         test.cpuPlacement(test.createBoard());
-        //Player DB Variables (Logan)
-        try {
+        
+        
+        //Remote Host MySQL Test (Logan)
+        DBConnect playerDB = new DBConnect();
+        playerDB.displayNames();
+        
+        
+        //**RETIRED**Player DB Connection and query (Logan)
+        /*try {
             String host         = "jdbc:derby://localhost:1527/Battleship";
             String userName     = "team";
             String pwd          = "260-05";
@@ -65,7 +72,7 @@ public class Battleship260_05 {
         }
         catch (SQLException err){
             System.out.println( err.getMessage());
-        }
+        }*/
         //End Player DB Variables
         
         Battleship260_05 newGame = new Battleship260_05(); // New instance of main class.
