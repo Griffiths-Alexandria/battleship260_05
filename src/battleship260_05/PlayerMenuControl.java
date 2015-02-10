@@ -11,10 +11,10 @@ package battleship260_05;
  */
 public class PlayerMenuControl {
     
-    public void startTwoPlayerGame() {
-        // Battleship260_05 newGame = new Battleship260_05();
-        System.out.println("Starting a new two player game...");
-        // newGame.generateNew2PGame();
+    public void displayNameMenu() {
+        NameMenuView nameMenu = new NameMenuView();
+        //System.out.println("Starting a new two player game...");
+        nameMenu.getInput();
     }
     public void startOnePlayerGame() {
         // Battleship260_05 newGame = new Battleship260_05;

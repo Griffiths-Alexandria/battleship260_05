@@ -34,7 +34,7 @@ public class PlayerMenuView {
 
                 switch (command) {
                     case "1"://PLAYER VS PLAYER
-                        this.playerMenuControl.startTwoPlayerGame();
+                        this.playerMenuControl.displayNameMenu();
                         break;
                     case "2"://PLAYER VS COMPUTER
                         this.playerMenuControl.startOnePlayerGame();

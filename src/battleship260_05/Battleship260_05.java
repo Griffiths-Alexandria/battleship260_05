@@ -43,10 +43,10 @@ public class Battleship260_05 {
     // MAIN METHOD
     public static void main(String[] args) {
         
-        shipPlacement test = new shipPlacement();
+        /*shipPlacement test = new shipPlacement();
         //test.getCoordinates();
         test.playerPlacement(test.createBoard());
-        test.cpuPlacement(test.createBoard());
+        test.cpuPlacement(test.createBoard());*/
         
         
         //Remote Host MySQL Test (Logan)

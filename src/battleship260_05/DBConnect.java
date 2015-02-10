@@ -42,6 +42,11 @@ public class DBConnect {
             String playerName;
             while (rs.next()){
                 playerName = rs.getString("playerName");
+                if (playerName.length() < 10){
+                    for (int i=10; i > playerName.length(); i--){
+                        playerName += " ";
+                    }
+                }
                 result.add(playerName);
             }
             return result;

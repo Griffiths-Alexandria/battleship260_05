@@ -10,5 +10,7 @@ package battleship260_05;
  * @author Logan Work
  */
 public class NameMenuControl {
-    
+    public void backToPSelect(){
+        return;
+    }
 }
