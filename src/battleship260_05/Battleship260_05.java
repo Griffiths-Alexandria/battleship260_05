@@ -10,6 +10,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.sql.ResultSet;
 //END Player DB import statements
 
 import java.util.Scanner;
@@ -42,12 +43,22 @@ public class Battleship260_05 {
     // MAIN METHOD
     public static void main(String[] args) {
         
-        //Player DB Variables (Logan)
+        //Player DB Connection and query (Logan)
         try {
             String host         = "jdbc:derby://localhost:1527/Battleship";
             String userName     = "team";
             String pwd          = "260-05";
             Connection conDB    = DriverManager.getConnection(host, userName, pwd);
+            
+            Statement stmt = conDB.createStatement();
+            String SQL = "select * from TEAM.PLAYERS where PLAYERNAME != 'CPU'";
+            ResultSet rs = stmt.executeQuery(SQL);
+            String playerName;
+            while (rs.next()) {
+                playerName = rs.getString("PLAYERNAME");
+                System.out.println(playerName);
+            }
+            
         }
         catch (SQLException err){
             System.out.println( err.getMessage());

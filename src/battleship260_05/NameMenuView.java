@@ -15,9 +15,9 @@ public class NameMenuView {
     // Constant Menu Items
     private final static String[][] menuFunctions = {
         {"A.", "ADD PLAYER"},
-        {"C.", "CHANGE PLAYER NAME"},
+        {"C.", "CHANGE PLAYER"},
         {"D.", "DELETE PLAYER"},
-        {"N.", "SHOW NEXT"}            
+        {"E.", "EDIT PLAYER NAME"}            
     };
     // Get names from DB
     
