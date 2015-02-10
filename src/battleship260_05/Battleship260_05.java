@@ -42,6 +42,9 @@ public class Battleship260_05 {
     // MAIN METHOD
     public static void main(String[] args) {
         
+        shipPlacement test = new shipPlacement();
+        test.getCoordinates();
+        
         //Player DB Variables (Logan)
         try {
             String host         = "jdbc:derby://localhost:1527/Battleship";
