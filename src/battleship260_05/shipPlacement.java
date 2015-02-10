@@ -60,14 +60,20 @@ public class shipPlacement {
         board[4][4] = 4;
         return board;
     }
+    void displayBoard() {
+        System.out.println("   [1][2][3][4][5]");
+        System.out.println("[1][ ][ ][ ][ ][ ]");
+        System.out.println("[2][ ][ ][ ][ ][ ]");
+        System.out.println("[3][ ][ ][ ][ ][ ]");
+        System.out.println("[4][ ][ ][ ][ ][ ]");
+        System.out.println("[5][ ][ ][ ][ ][ ]");
+    }
     
-    int x = 5;
-    int y = 5;
-    int tries;
     void cpuPlacement(int[][] board) {
+        int tries = 0;
         while (sunk != true) {
-            int guess1 = roll.nextInt(x);
-            int guess2 = roll.nextInt(y);
+            int guess1 = roll.nextInt(5);
+            int guess2 = roll.nextInt(5);
             if (board[guess1][guess2] > 0) {
                 System.out.println("The computer was " + board[guess1][guess2] + " spaces away...");
                 tries++;
@@ -75,6 +81,26 @@ public class shipPlacement {
             if (board[guess1][guess2] == 0) {
                 System.out.println("The computer found the point!");
                 System.out.println("It took it " + tries + " tries!");
+                sunk = true;
+            }
+        }
+    }
+    void playerPlacement(int[][] board) {
+        int tries = 0;
+        Scanner input = new Scanner(System.in);
+        while (sunk != true) {
+            this.displayBoard();
+            System.out.println("Choose a vertical (x) co-ordinate:");
+            int x = input.nextInt();
+            System.out.println("Choose a horizontal (y) co-ordinate:");
+            int y = input.nextInt();
+            if (board[x-1][y-1] > 0) {
+                System.out.println("That is not it.");
+                System.out.println("You are " + board[x-1][y-1] + " spaces away!");
+                tries++;
+            } else {
+                System.out.println("You found it!");
+                System.out.println("It only took you " + tries + " tries!");
                 sunk = true;
             }
         }
