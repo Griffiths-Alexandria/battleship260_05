@@ -43,7 +43,10 @@ public class Battleship260_05 {
     // MAIN METHOD
     public static void main(String[] args) {
         
-        //Player DB Connection and query (Logan)
+        shipPlacement test = new shipPlacement();
+        //test.getCoordinates();
+        test.cpuPlacement(test.createBoard());
+        //Player DB Variables (Logan)
         try {
             String host         = "jdbc:derby://localhost:1527/Battleship";
             String userName     = "team";
@@ -94,7 +97,7 @@ public class Battleship260_05 {
         
         /*  Daniel Diaz Homework: Create a new instance of the class in the main( )  function of the main class 
         *   and call the display functions to list the values of the variables in the main ( ) funciton.
-        */    
+        */
         ScoreBoard NewScoreboard = new ScoreBoard ("* Joe Black *", 11, 3, 5, 0, 27.28 , "\n* Sue Red *", 10, 5, 50.00);
         NewScoreboard.getInfo();
     
