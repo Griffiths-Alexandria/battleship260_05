@@ -36,7 +36,7 @@ public class DBConnect {
     
     public ArrayList getNames(){
         try {
-            ArrayList<String> result = new ArrayList();
+            ArrayList<String> result = new ArrayList<>();
             String query = "select playerName from players where playerName != 'CPU'";
             rs = stmt.executeQuery(query);
             String playerName;
