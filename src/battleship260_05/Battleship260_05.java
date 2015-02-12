@@ -50,12 +50,12 @@ public class Battleship260_05 {
         
         
         //Remote Host MySQL Test (Logan)
-        DBConnect playerDB = new DBConnect();
-        playerDB.displayNames();
+       DBConnect playerDB = new DBConnect();
+       playerDB.displayNames();
         
         
         //**RETIRED**Player DB Connection and query (Logan)
-        /*try {
+       /*try {
             String host         = "jdbc:derby://localhost:1527/Battleship";
             String userName     = "team";
             String pwd          = "260-05";
@@ -73,9 +73,9 @@ public class Battleship260_05 {
         }
         catch (SQLException err){
             System.out.println( err.getMessage());
-        }*/
+        }
         //End Player DB Variables
-        
+        */
         Battleship260_05 newGame = new Battleship260_05(); // New instance of main class.
         
         //Show the Game Banner and Title
