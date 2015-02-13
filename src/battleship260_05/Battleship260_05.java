@@ -43,6 +43,17 @@ public class Battleship260_05 {
     // MAIN METHOD
     public static void main(String[] args) {
         
+        
+        //Paired programming assignment 5
+        BoardView testinput = new BoardView();
+        String response = testinput.getInput();
+        System.out.println(response);
+        
+        
+        
+        
+        
+        
         /*shipPlacement test = new shipPlacement();
         //test.getCoordinates();
         test.playerPlacement(test.createBoard());
