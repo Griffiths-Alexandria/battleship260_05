@@ -65,9 +65,12 @@ public class BoardView {
             strCoordinates = strCoordinates.trim();
             coordinates = strCoordinates.split(",");
 
-            //If user enters nothing, spaces, or does not separate input with a comma.
+            //If user enters nothing, spaces, does not separate input with a comma, or has more than one comma.
             if(coordinates.length <= 1){
                 new BattleshipError().displayError("Must enter a value for each coordinate.");
+                continue;
+            } else if (coordinates.length > 2){
+                new BattleshipError().displayError("Please enter only 1 set of coordinates.");
                 continue;
             } else {
                 coordinates[0] = coordinates[0].trim();
