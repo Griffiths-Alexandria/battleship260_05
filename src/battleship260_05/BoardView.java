@@ -61,57 +61,50 @@ public class BoardView {
         while(!valid){
             System.out.println("Enter Coordinates: (i.e. 1,3)");
             
-           String strCoordinates = inFile.nextLine();
-           strCoordinates = strCoordinates.trim();
-           coordinates = strCoordinates.split(",");
-           
-           if(coordinates.length <= 1){
-               new BattleshipError().displayError("Must enter a value for each coordinate.");
-               continue;
-               
-               }
-           
-           String regex = ".*\\d.*";
-           
-       if(!coordinates[0].matches(regex)||!coordinates[1].matches(regex)){
-                new BattleshipError().displayError("Coordinates must be integers.");
+            String strCoordinates = inFile.nextLine();
+            strCoordinates = strCoordinates.trim();
+            coordinates = strCoordinates.split(",");
+
+            //If user enters nothing, spaces, or does not separate input with a comma.
+            if(coordinates.length <= 1){
+                new BattleshipError().displayError("Must enter a value for each coordinate.");
                 continue;
+            } else {
+                coordinates[0] = coordinates[0].trim();
+                coordinates[1] = coordinates[1].trim();
+                if (coordinates[0].equals("") || coordinates[1].equals("")){//checks to make sure the resulting strings are not empty.
+                    new BattleshipError().displayError("Coordinates may not be empty.");
+                    continue;
                 }
-              
+            }
+            
+            String hasNaN = ".*\\D+.*";//pattern for 1 or more non-numeric digits in the string.
+            
+            //If user includes a letter in either coordinate.
+            if(coordinates[0].matches(hasNaN) || coordinates[1].matches(hasNaN)){
+                new BattleshipError().displayError("Coordinates must be positive integers.");
+                continue;
+            }
+            
             x = Integer.parseInt(coordinates[0]);
             y = Integer.parseInt(coordinates[1]);
            
-           int boardSize = 10;
-           if(x < 1 || x > boardSize || y < 1 || y > boardSize){
-               new BattleshipError().displayError("Coordinates must be greater than 0 and less than or equal to " + boardSize );
-               continue;
+            int boardSize = 10;
+            if(x < 1 || x > boardSize || y < 1 || y > boardSize){
+                new BattleshipError().displayError("Coordinates must be greater than 0 and less than or equal to " + boardSize );
+                continue;
+            }
            
-           }
-           
-           /*
-               location = new Point(x-1,y-1); don't have the necessary structure yet.
+            /*
+               location = new Point(x-1,y-1); //We don't have the necessary structure yet.
                    if(board.location[x-1][y-1] != null){
                    new BattleshipError().displayError("You've already attacked this location");
                    continue;
-                   }
-                   
-                   
-           */
+                }
+            */
            
-           valid = true;
-           
-          
+            valid = true;
         }
         return "You fired at " + x + ","+ y;
     }
-
-
-
-
 }
-
-
-
-
-
-
