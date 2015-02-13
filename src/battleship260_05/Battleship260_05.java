@@ -50,6 +50,9 @@ public class Battleship260_05 {
         System.out.println(response);
         
         
+        //Sue's individual assignment 5
+        Assignment5IndividualSue test = new Assignment5IndividualSue();
+        System.out.println(test.topScore(5));
         
         
         
