@@ -42,7 +42,7 @@ public class Battleship260_05 {
     
     // MAIN METHOD
     public static void main(String[] args) {
-        /*
+        
         //rachel's individual assignment 5
         Turn tinput = new Turn();
        tinput.showsalvoShots();
@@ -56,7 +56,7 @@ public class Battleship260_05 {
         //Sue's individual assignment 5
         Assignment5IndividualSue test = new Assignment5IndividualSue();
         System.out.println(test.topScore(5));
-        */
+        
         // Christian's individual assignment 5
         shipPlacement christian = new shipPlacement();
         christian.randomizeSetup();
