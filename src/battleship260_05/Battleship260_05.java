@@ -65,6 +65,10 @@ public class Battleship260_05 {
         Assignment5IndividualSue test = new Assignment5IndividualSue();
         System.out.println(test.topScore(5));
         
+        //Sterling's Individual assignment 5
+        SterlingLessonFive sterling = new SterlingLessonFive();
+        sterling.showBoard();
+
         // Christian's individual assignment 5
         shipPlacement christian = new shipPlacement();
         christian.randomizeSetup();
