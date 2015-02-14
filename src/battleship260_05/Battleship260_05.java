@@ -65,14 +65,18 @@ public class Battleship260_05 {
         Assignment5IndividualSue test = new Assignment5IndividualSue();
         System.out.println(test.topScore(5));
         
+        // Wendell's individual assignment 5
+        WendellLesson5 shipDetail = new WendellLesson5();
+        shipDetail.myList();
+        
         //Sterling's Individual assignment 5
         SterlingLessonFive sterling = new SterlingLessonFive();
         sterling.showBoard();
-
+        
+        
         // Christian's individual assignment 5
         shipPlacement christian = new shipPlacement();
         christian.randomizeSetup();
-        
         
         //Remote Host MySQL Test (Logan)
        DBConnect playerDB = new DBConnect();
