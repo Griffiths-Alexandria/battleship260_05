@@ -28,6 +28,7 @@ public class shipPlacement {
     Boolean sunk = false;
     int here = 5;
     Random roll = new Random();
+    
     shipPlacement() {
     }
     
@@ -68,7 +69,6 @@ public class shipPlacement {
         System.out.println("[4][ ][ ][ ][ ][ ]");
         System.out.println("[5][ ][ ][ ][ ][ ]");
     }
-    
     void cpuPlacement(int[][] board) {
         int tries = 0;
         while (sunk != true) {
@@ -103,6 +103,82 @@ public class shipPlacement {
                 System.out.println("It only took you " + tries + " tries!");
                 sunk = true;
             }
+        }
+    }
+    
+    private String[][] randomBoard = {
+        {"   ", "[1]", "[2]", "[3]", "[4]", "[5]"},
+        {"[A]", "[ ]", "[ ]", "[ ]", "[ ]", "[ ]"},
+        {"[B]", "[ ]", "[ ]", "[ ]", "[ ]", "[ ]"},
+        {"[C]", "[ ]", "[ ]", "[ ]", "[ ]", "[ ]"},
+        {"[D]", "[ ]", "[ ]", "[ ]", "[ ]", "[ ]"},
+        {"[E]", "[ ]", "[ ]", "[ ]", "[ ]", "[ ]"},
+    };
+    
+    void randomizeSetup() {
+        Random roll = new Random();
+        for (int i = 0; i < 5; i++) {
+            int inside = roll.nextInt(3);
+            if (inside == 0) {
+                randomBoard[1][i+1] = "[X]";
+            } else if (inside == 1) {
+                randomBoard[1][i+1] = "[O]";
+            } else if (inside == 2) {
+                randomBoard[1][i+1] = "[#]";
+            } else {
+                randomBoard[1][i+1] = "[ ]";
+            }
+        }
+        for (int i = 0; i < 5; i++) {
+            int inside = roll.nextInt(3);
+            if (inside == 0) {
+                randomBoard[2][i+1] = "[X]";
+            } else if (inside == 1) {
+                randomBoard[2][i+1] = "[O]";
+            } else if (inside == 2) {
+                randomBoard[2][i+1] = "[#]";
+            } else {
+                randomBoard[2][i+1] = "[ ]";
+            }
+        }
+        for (int i = 0; i < 5; i++) {
+            int inside = roll.nextInt(3);
+            if (inside == 0) {
+                randomBoard[3][i+1] = "[X]";
+            } else if (inside == 1) {
+                randomBoard[3][i+1] = "[O]";
+            } else if (inside == 2) {
+                randomBoard[3][i+1] = "[#]";
+            } else {
+                randomBoard[3][i+1] = "[ ]";
+            }
+        }
+        for (int i = 0; i < 5; i++) {
+            int inside = roll.nextInt(3);
+            if (inside == 0) {
+                randomBoard[4][i+1] = "[X]";
+            } else if (inside == 1) {
+                randomBoard[4][i+1] = "[O]";
+            } else if (inside == 2) {
+                randomBoard[4][i+1] = "[#]";
+            } else {
+                randomBoard[4][i+1] = "[ ]";
+            }
+        }
+        for (int i = 0; i < 5; i++) {
+            int inside = roll.nextInt(3);
+            if (inside == 0) {
+                randomBoard[5][i+1] = "[X]";
+            } else if (inside == 1) {
+                randomBoard[5][i+1] = "[O]";
+            } else if (inside == 2) {
+                randomBoard[5][i+1] = "[#]";
+            } else {
+                randomBoard[5][i+1] = "[ ]";
+            }
+        }
+        for (int i = 0; i < this.randomBoard.length; i++) {
+            System.out.println(randomBoard[i][0] + randomBoard[i][1] + randomBoard[i][2] + randomBoard[i][3] + randomBoard[i][4] + randomBoard[i][5]);
         }
     }
 }

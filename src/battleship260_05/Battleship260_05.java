@@ -57,13 +57,9 @@ public class Battleship260_05 {
         Assignment5IndividualSue test = new Assignment5IndividualSue();
         System.out.println(test.topScore(5));
         
-        
-        
-        
-        /*shipPlacement test = new shipPlacement();
-        //test.getCoordinates();
-        test.playerPlacement(test.createBoard());
-        test.cpuPlacement(test.createBoard());*/
+        // Christian's individual assignment 5
+        shipPlacement christian = new shipPlacement();
+        christian.randomizeSetup();
         
         
         //Remote Host MySQL Test (Logan)
