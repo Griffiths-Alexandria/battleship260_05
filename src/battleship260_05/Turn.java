@@ -33,6 +33,9 @@ public class Turn {
    if (numshipSunk == i){
     System.out.println("You have "+ Calculateshotsleft+ " shot(s) left.");
    } 
+   else if (numshipSunk > 5 || numshipSunk < 0){
+       System.out.println("Invalid input");
+    }
    //there are a couple things I realize I could add to make this code better like check the users input and display an error, however we already have a function that does this. For the purpose of the individual assignment, I kept it really basic as this isn't what we will use. 
   
     } 
