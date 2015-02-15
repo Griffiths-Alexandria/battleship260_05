@@ -30,8 +30,10 @@ public class AlexLesson5Alternate {
             
         }
         System.out.println();
+       
     }
 }
+
        
         
         

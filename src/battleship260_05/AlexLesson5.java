@@ -52,7 +52,7 @@ public class AlexLesson5 {
             Scanner ph = new Scanner(System.in); 
             int playerHits = ph.nextInt(); 
             
-            calculateHits = 17 - playerHits; 
+            calculateHits = totalHits[17] - playerHits; 
             
             if(calculateHits == totalHits[0]){
                 System.out.println("You sunk all the ships! Congratulations!\n\n");

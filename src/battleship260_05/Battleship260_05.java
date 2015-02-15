@@ -69,9 +69,13 @@ public class Battleship260_05 {
         WendellLesson5 shipDetail = new WendellLesson5();
         shipDetail.myList();
         
+        // Daniel Diaz individual assignment 5
+        DanielLesso5 playersRanking = new DanielLesso5();
+        playersRanking.playerRanking();
+        
         //Sterling's Individual assignment 5
-        /*SterlingLessonFive sterling = new SterlingLessonFive();
-        sterling.showBoard();*/
+        //SterlingLessonFive sterling = new SterlingLessonFive();
+        //sterling.showBoard();
         
         //START 
         //To allow BoardView and BoardModel to interact, for now I am treating this main class as the controller. Logan
