@@ -70,8 +70,8 @@ public class Battleship260_05 {
         shipDetail.myList();
         
         //Sterling's Individual assignment 5
-        SterlingLessonFive sterling = new SterlingLessonFive();
-        sterling.showBoard();
+        //SterlingLessonFive sterling = new SterlingLessonFive();
+        //sterling.showBoard();
         
         
         // Christian's individual assignment 5
