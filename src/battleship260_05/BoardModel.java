@@ -20,13 +20,17 @@ public class BoardModel {
         this.setup = setup;
         
     }
-    void setShip(int xStartPos, int yStartPos, int shipSize, boolean vertical, String shipLetter) {
-        int i;
-        for(i=0;i<shipSize; i++){
+    public void setShip(LocationInfo location, Ship ship) {
+        int row = location.row;
+        int col = location.col;
+        boolean vertical = location.vertical;
+        String letter = ship.description;
+        
+        for(int i=0;i<ship.size; i++){
             if (vertical){
-                grid[xStartPos][yStartPos+i] = shipLetter;
+                this.grid[row+i][col] = letter;
             } else {
-                grid[xStartPos+i][yStartPos] = shipLetter;
+                this.grid[row][col+i] = letter;
             }
         }
     }

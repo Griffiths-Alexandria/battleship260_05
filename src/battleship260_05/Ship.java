@@ -13,17 +13,17 @@ import java.util.Random;
 public class Ship {
     String name;
     String description;
-    int hitCount;
+    int size;
     Boolean sunk = false;
     
     Ship(String name, String description, int size) {
         this.name = name;
         this.description = description;
-        this.hitCount = size;
+        this.size = size;
     }
     
     void getInfo() {
-        System.out.println(this.name + ", " + this.description + "\n" + "It has a Hit Count of " + this.hitCount);
+        System.out.println(this.name + ", " + this.description + "\n" + "It has a Hit Count of " + this.size);
     }
     
     //Stuff for Individual Assignment
@@ -33,13 +33,13 @@ public class Ship {
     void hitReduction() {
         result = coin.nextInt(100);
         if (result >= 50) {
-            if (hitCount == 0) {
+            if (size == 0) {
                 System.out.println("There is no ship remaining!");
             }
             else {
-                hitCount -= 1;
+                size -= 1;
                 System.out.println("A Ship has been hit!");
-                if (hitCount <= 0) {
+                if (size <= 0) {
                     sunk = true;
                     System.out.println("Ship Destroyed!");
                 }

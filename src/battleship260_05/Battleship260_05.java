@@ -70,21 +70,49 @@ public class Battleship260_05 {
         shipDetail.myList();
         
         //Sterling's Individual assignment 5
-        SterlingLessonFive sterling = new SterlingLessonFive();
-        sterling.showBoard();
+        /*SterlingLessonFive sterling = new SterlingLessonFive();
+        sterling.showBoard();*/
         
+        //START 
+        //To allow BoardView and BoardModel to interact, for now I am treating this main class as the controller. Logan
+        
+        //Bring in the Board View and get the size from the user
+        BoardView board = new BoardView(); //New instance of a BoardView object.
+        int boardSize = board.getBoardSize(); //Call method to allow user to input board size.
+        
+        //Bring in the Board Model, which requires a size and a mode(setup = true, gameplay = false)
+        BoardModel boardData = new BoardModel(boardSize, true); //New instance of BoardModel object, passed boardSize from input above.
+        String[][] boardInfo = boardData.getNewBoard(); //The data model for the board (a two-dim String array) is created and stored in boardInfo.
+        
+        //Pass the Board information back to the View
+        board.displayBoard(boardInfo); //Display the board to the user.
+        String[] shipNames = {"CARRIER", "BATTLESHIP", "DESTROYER", "SUBMARINE", "PATROLBOAT"};
+        String[] shipSymbols = {"C", "B", "D", "S", "P"};
+        int[] shipSizes = {5,4,3,3,2};
+        
+        Ship[] playerShips = new Ship[shipNames.length];
+        for (int s = 0; s<shipNames.length; s++){
+            playerShips[s] = new Ship(shipNames[s], shipSymbols[s], shipSizes[s]);
+        }
+        
+        for (int i=0; i<playerShips.length; i++){
+            LocationInfo location = board.getShipPlacement(playerShips[i], boardData.getBoard());
+            boardData.setShip(location, playerShips[i]);
+            board.displayBoard(boardData.getBoard());
+        }
+
         
         // Christian's individual assignment 5
         shipPlacement christian = new shipPlacement();
         christian.randomizeSetup();
         
         //Remote Host MySQL Test (Logan)
-       DBConnect playerDB = new DBConnect();
-       playerDB.displayNames();
+        DBConnect playerDB = new DBConnect();
+        playerDB.displayNames();
         
         
         //**RETIRED**Player DB Connection and query (Logan)
-       /*try {
+        /*try {
             String host         = "jdbc:derby://localhost:1527/Battleship";
             String userName     = "team";
             String pwd          = "260-05";
@@ -160,20 +188,6 @@ public class Battleship260_05 {
         myGame.displayHelp();
         myGame.displayMenu();
 
-        //START 
-        //To allow BoardView and BoardModel to interact, for now I am treating this main class as the controller. Logan
-        
-        //Bring in the Board View and get the size from the user
-        BoardView newBoard = new BoardView(); //New instance of a BoardView object.
-        int boardSize = newBoard.getBoardSize(); //Call method to allow user to input board size.
-        
-        //Bring in the Board Model, which requires a size and a mode(setup = true, gameplay = false)
-        BoardModel boardData = new BoardModel(boardSize, true); //New instance of BoardModel object, passed boardSize from input above.
-        String[][] boardInfo = boardData.getNewBoard(); //The data model for the board (a two-dim String array) is created and stored in boardInfo.
-        
-        //Pass the Board information back to the View
-        newBoard.displayBoard(boardInfo); //Display the board to the user.
-        
         // Menu_temp stuff
         menu_temp newMenu = new menu_temp("NEW GAME");
         newMenu.titleShow();
