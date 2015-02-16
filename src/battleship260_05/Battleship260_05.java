@@ -42,7 +42,7 @@ public class Battleship260_05 {
     
     // MAIN METHOD
     public static void main(String[] args) {
-
+/*
         
         //rachel's individual assignment 5
         Turn tinput = new Turn();
@@ -105,10 +105,10 @@ public class Battleship260_05 {
             board.displayBoard(boardData.getBoard());
         }
 
-        
+        */
         // Christian's individual assignment 5
         shipPlacement christian = new shipPlacement();
-        christian.randomizeSetup();
+        christian.gameProcessing();
         
         //Remote Host MySQL Test (Logan)
         DBConnect playerDB = new DBConnect();
