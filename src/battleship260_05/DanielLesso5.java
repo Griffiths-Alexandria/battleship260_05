@@ -11,7 +11,7 @@ package battleship260_05;
  */
 public class DanielLesso5 {
     public void playerRanking(){
-            String[] playerName = {"Joe Black", "Nina Turner", "Pete Parker", "Mike Tyson"};
+            String[] playerName = {"Joe Black", "Nina Turner", "Pete Parker", "Mike Tyson", "Daniel Diaz"};
             int[] playerRank = {1,2,3,4,5};
             int i;
             for(i = 0; i < 5; i++){

@@ -65,7 +65,7 @@ public class BoardView {
         
         userinput:
         while(!valid){
-            System.out.println("Enter starting coordinates(row,col) for your " + shipName + ": (i.e. 1,3)");
+            System.out.println("Enter starting coordinates(row,col) for your " + shipName + "(" + ship.size + " spaces): (i.e. 1,3)");
             
             String strCoordinates = inFile.nextLine();
             strCoordinates = strCoordinates.trim();
