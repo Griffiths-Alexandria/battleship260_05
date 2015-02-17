@@ -1522,7 +1522,8 @@ public class shipPlacement {
                             case "Y":
                                 break;
                             case "N":
-                                System.exit(0);
+                                return;
+                                //System.exit(0);
                             default:
                                 System.out.println("That wasn't a choice...");
                         }

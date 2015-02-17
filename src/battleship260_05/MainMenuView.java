@@ -55,6 +55,7 @@ public class MainMenuView {
                     this.mainMenuControl.displayCreditsMenu();
                     break;
                 case "6"://Exit
+                    System.exit(0);
                     break;    
                 default: 
                     new BattleshipError().displayError("Invalid command. Please enter a valid command.");
