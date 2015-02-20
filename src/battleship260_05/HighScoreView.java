@@ -63,13 +63,18 @@ public class HighScoreView {
         System.out.println("**                        PLAYER    SCORES                          **");
         System.out.println("**********************************************************************\n");
         
-         scoreData = sortHighScores(); 
-        
-            
-            
-        for(int i = 0; i < scoreData.players.length; i++){
-        System.out.println("\t" + (i+1) + ".\t" + scoreData.players[i] + "\t" + scoreData.scores[i]);
-         }
+         
+         
+         if(players.length != scores.length){
+             System.out.println("Players Array and Scores Array are not the same size."); 
+         } else {
+              scoreData = sortHighScores();
+              
+              for(int i = 0; i < scoreData.players.length; i++){
+                    System.out.println("\t" + (i+1) + ".\t" + scoreData.players[i] + "\t" + scoreData.scores[i]);
+              }
+       
+            }
             
             
     }
