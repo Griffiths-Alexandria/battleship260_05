@@ -67,7 +67,7 @@ public class HighScoreView {
         
             
             
-        for(int i = 0; i < scores.length; i++){
+        for(int i = 0; i < scoreData.players.length; i++){
         System.out.println("\t" + (i+1) + ".\t" + scoreData.players[i] + "\t" + scoreData.scores[i]);
          }
             
