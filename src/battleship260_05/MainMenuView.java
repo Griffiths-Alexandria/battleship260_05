@@ -17,8 +17,9 @@ public class MainMenuView {
         {"2.", "OPTIONS"},
         {"3.", "RULES"},
         {"4.", "HELP"}, 
-        {"5.", "CREDITS"},
-        {"6.", "EXIT"}
+        {"5.", "HIGH SCORES"},
+        {"6.", "CREDITS"},
+        {"7.", "EXIT"}
     };
     MainMenuControl mainMenuControl = new MainMenuControl();
     
@@ -50,18 +51,21 @@ public class MainMenuView {
                     break;
                 case "4"://HELP PAIRED ASSIGNMENT LESSON 4
                     this.mainMenuControl.displayHelpMenu(); 
-                    break; 
-                case "5"://Credits
+                    break;
+                case "5"://HIGH SCORES PAIRED ASSIGNMENT LESSON 6
+                    this.mainMenuControl.displayHighScores(); 
+                    break;
+                case "6"://Credits
                     this.mainMenuControl.displayCreditsMenu();
                     break;
-                case "6"://Exit
+                case "7"://Exit
                     System.exit(0);
                     break;    
                 default: 
                     new BattleshipError().displayError("Invalid command. Please enter a valid command.");
                     //continue;    
             }
-        } while(!command.equals("6"));
+        } while(!command.equals("7"));
         
     }
     

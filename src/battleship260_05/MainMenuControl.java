@@ -30,4 +30,8 @@ public class MainMenuControl {
         HelpMenuView helpMenu = new HelpMenuView(); 
         helpMenu.getInput();
     }
+    public void displayHighScores(){
+        HighScoresView highScores = new HighScoresView();
+        highScores.display();
+    }
 }
