@@ -23,6 +23,16 @@ public class Assignment5IndividualSue {
     topScore[8] = 200;
     topScore[9] = 100;
     }
+    
+    public void sumOfScore(){
+        int total = 0;
+        for(int x: topScore){
+            total += x;
+            
+        }
+        System.out.println("total is " + total); 
+    }
+    
     public int topScore(int score){
         for(int i = 0; i<topScore.length; i++){
             if(score>=topScore[i]){
