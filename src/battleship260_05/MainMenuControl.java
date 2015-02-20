@@ -31,7 +31,7 @@ public class MainMenuControl {
         helpMenu.getInput();
     }
     public void displayHighScores(){
-        HighScoresView highScores = new HighScoresView();
-        highScores.display();
+        HighScoreView highScores = new HighScoreView();
+        highScores.getInput(); 
     }
 }

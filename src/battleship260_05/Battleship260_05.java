@@ -42,7 +42,7 @@ public class Battleship260_05 {
     
     // MAIN METHOD
     public static void main(String[] args) {
-
+        /*
         
         //rachel's individual assignment 5
         Turn tinput = new Turn();
@@ -54,8 +54,8 @@ public class Battleship260_05 {
         System.out.println(response);
         
         //Alex's Individual Assignment 5
-        AlexLesson5Alternate shipinfolist = new AlexLesson5Alternate(); 
-        shipinfolist.allShipTypes();   
+        //AlexLesson5Alternate shipinfolist = new AlexLesson5Alternate(); 
+        //shipinfolist.allShipTypes();   
         
         AlexLesson5 getHitinput = new AlexLesson5(); 
         getHitinput.totalHitWin(); 
@@ -137,6 +137,7 @@ public class Battleship260_05 {
         }
         //End Player DB Variables
         */
+        
         Battleship260_05 newGame = new Battleship260_05(); // New instance of main class.
         
         //Show the Game Banner and Title
