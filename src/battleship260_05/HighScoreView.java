@@ -16,10 +16,13 @@ public class HighScoreView {
     
         String[] players = {"Alex", "Sue", "Rachel"}; 
         int[] scores = {11,52,31};
-    
+        ScoreInfo scoreInfo; 
     
         
-    public void sortHighScores(){
+    public ScoreInfo sortHighScores(){
+        
+        ScoreInfo scoreInfo = new ScoreInfo(); 
+        
         
         for (int i = 1; i < scores.length; i++) {
        
@@ -42,19 +45,31 @@ public class HighScoreView {
         } 
         
     }
-    for(int i = 0; i < players.length; i++){
-        System.out.println("\t" + (i+1) + ".\t" + players[i] + "\t" + scores[i]);
-    }
+   
+   scoreInfo.players = players; 
+   scoreInfo.scores = scores; 
+    
+    return scoreInfo; 
+    
         
 }
     
     
     public void displayScores(){
-        System.out.println("\n**********************************************************************");
-            System.out.println("**                        PLAYER    SCORES                          **");
-            System.out.println("**********************************************************************\n");
         
-            sortHighScores(); 
+        ScoreInfo scoreData; 
+        
+        System.out.println("\n**********************************************************************");
+        System.out.println("**                        PLAYER    SCORES                          **");
+        System.out.println("**********************************************************************\n");
+        
+         scoreData = sortHighScores(); 
+        
+            
+            
+        for(int i = 0; i < scores.length; i++){
+        System.out.println("\t" + (i+1) + ".\t" + scoreData.players[i] + "\t" + scoreData.scores[i]);
+         }
             
             
     }
