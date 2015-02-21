@@ -16,7 +16,7 @@ public class rachel_lesson6_individual_assignment {
         int temp;
         double average=0;
         double round;
- 
+ //this takes rachelsScore[] and sorts it from lowest to highest
         int i;
         boolean flag = true;   
         while ( flag ){
@@ -35,6 +35,7 @@ public class rachel_lesson6_individual_assignment {
         for(int x: rachelsScore){
             System.out.print(x+" ");
         }
+        //this is calculating the average
         for(int x:rachelsScore){
             average +=x;
         }    
