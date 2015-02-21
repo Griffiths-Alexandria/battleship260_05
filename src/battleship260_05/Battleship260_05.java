@@ -59,6 +59,9 @@ public class Battleship260_05 {
         AlexLesson6 getHitSum = new AlexLesson6(); 
         getHitSum.getHitSum(); 
         
+        //Wendell Individual Assignment 6
+        WendellLesson6 newAssign = new WendellLesson6();
+        newAssign.totHits();
         
         //Sue's individual assignment 5
         Assignment5IndividualSue test = new Assignment5IndividualSue();
