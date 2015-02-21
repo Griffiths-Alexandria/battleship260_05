@@ -30,6 +30,8 @@ public class Battleship260_05 {
     Player player1 = new Player("Joe","black");
     Player player2 = new Player("Lucy","red");
     
+    public static BoardModel boardData;
+    public static BoardView board;
     //I don't think we are using these anywhere. NO we are not, let's delete? 
     /*String instructions = "Welcome to the game of Battleship! \n\n"
            + "Player 1 and Player 2 will be competing with each other. \n"
@@ -82,16 +84,16 @@ public class Battleship260_05 {
         //Sterling's Individual assignment 5
         //SterlingLessonFive sterling = new SterlingLessonFive();
         //sterling.showBoard();
-        
+        */
         //START 
         //To allow BoardView and BoardModel to interact, for now I am treating this main class as the controller. Logan
         
         //Bring in the Board View and get the size from the user
-        BoardView board = new BoardView(); //New instance of a BoardView object.
+        board = new BoardView(); //New instance of a BoardView object.
         int boardSize = board.getBoardSize(); //Call method to allow user to input board size.
         
         //Bring in the Board Model, which requires a size and a mode(setup = true, gameplay = false)
-        BoardModel boardData = new BoardModel(boardSize, true); //New instance of BoardModel object, passed boardSize from input above.
+        boardData = new BoardModel(boardSize, true); //New instance of BoardModel object, passed boardSize from input above.
         String[][] boardInfo = boardData.getNewBoard(); //The data model for the board (a two-dim String array) is created and stored in boardInfo.
         
         //Pass the Board information back to the View
@@ -105,13 +107,30 @@ public class Battleship260_05 {
             playerShips[s] = new Ship(shipNames[s], shipSymbols[s], shipSizes[s]);
         }
         
-        for (int i=0; i<playerShips.length; i++){
-            LocationInfo location = board.getShipPlacement(playerShips[i], boardData.getBoard());
-            boardData.setShip(location, playerShips[i]);
+        for (Ship ship : playerShips){
+            LocationInfo location = board.getShipPlacement(ship, boardData.getBoard());
+            boardData.setShip(location, ship);
             board.displayBoard(boardData.getBoard());
         }
-
+        boardData.shipsPlaced = true;
         
+        
+        if (boardData == null){
+            new BattleshipError().displayError("There is no board to search.");
+            return;
+        } else if (playerShips == null){
+            new BattleshipError().displayError("There are no ships to search.");
+            return;
+        } else if (!boardData.shipsPlaced){
+            new BattleshipError().displayError("Ships have not been placed on the board.");
+            return;
+        } else {
+            Ship search = board.getSearch(playerShips);
+            int[][] result = boardData.searchBoard(search);
+            board.showSearchResult(result);
+        }
+
+        /*
         // Christian's individual assignment 5
         shipPlacement christian = new shipPlacement();
         christian.gameProcessing();

@@ -50,6 +50,51 @@ public class BoardView {
         return boardDim;
     }
     
+    public Ship getSearch(Ship[] ships) {
+        Scanner inFile = new Scanner(System.in);
+        Ship shipByLetter = null;
+                
+        boolean valid = false;
+        
+        notvalid:
+        while (!valid){
+            System.out.print("Ship List: ");
+            for (Ship label : ships){
+                System.out.print(label.name + "   ");
+            }
+            System.out.println();
+            System.out.println("Enter the name or first letter of the ship you want to find:");
+            String userInput = inFile.nextLine();
+            userInput = userInput.trim().toUpperCase();
+            
+            if (userInput.length()<1){
+                new BattleshipError().displayError("Empty entry. Must name a ship you want to find.");
+                continue;
+            }
+            userInput = userInput.substring(0, 1);
+            
+            for (Ship ship : ships){
+                if (userInput.equals(ship.description)){
+                    shipByLetter = ship;
+                    break;
+                }
+            }
+            if (shipByLetter == null) {
+                new BattleshipError().displayError("Your entry '" + userInput + "' did not match any of the ship names. Please try again.");
+                continue;
+            }
+            valid = true;            
+        }
+        return shipByLetter;
+    }
+    public void showSearchResult(int[][] shipLocation) {
+        //Code to iterate through the array and show the coordinates of the ship
+        System.out.println("The ship was found at the following coordinates:");
+        for (int[] row : shipLocation){
+                System.out.println("["+row[0]+", "+row[1]+"]");
+        }
+    }
+    
     public LocationInfo getShipPlacement(Ship ship, String[][] grid){
         //Instance variables
         Scanner inFile = new Scanner(System.in);
