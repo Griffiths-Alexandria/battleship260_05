@@ -28,7 +28,7 @@ public class AlexLesson6 {
         
         for(i=0; i < turns.length; i++){
             sum += turns[i]; 
-            average = ((sum/turns.length)*100)/100;
+            average = sum/turns.length;
             
         }
          
