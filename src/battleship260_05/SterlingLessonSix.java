@@ -12,20 +12,20 @@ package battleship260_05;
 
 public class SterlingLessonSix {
       //computes the top five average scores
+    public void stuff(){
     int scores [] = { 5000, 2800, 1974, 800, 700};
     int average;
     int sum=0;
-    int x;
-   
-        for (i=0; i < scores.length; i++){
+    int x=0;
+    
+    for (i=0; i < scores.length; i++){
        
-      
         }
    
-    for(x: scores){    
+    for(x : scores){    
     sum=x+x;
     average=x/scores.length;
-    system.out.println(average + "The average score is of the top 5 is: ");      
+    System.out.println(average + "The average score of the top 5 is: ");      
     }
+  }
 }
-
