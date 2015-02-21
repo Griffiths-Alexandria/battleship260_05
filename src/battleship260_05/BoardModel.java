@@ -52,24 +52,20 @@ public class BoardModel {
     public int[][] searchBoard(Ship ship){
         int[][] shipIsAt = new int[ship.size][2];
         int index = 0;
-        int rCount = 0;
-        int cCount = 0;
+        int rCount = 1;
+        int cCount = 1;
         for (String[] row : grid){
             for (String col : row){
                 if (col.equals(ship.description)){
-                    shipIsAt[index][0] = rCount+1;
-                    shipIsAt[index][1] = cCount+1;
+                    shipIsAt[index][0] = rCount;
+                    shipIsAt[index][1] = cCount;
                     index++;
                 }
                 cCount++;
-                if (cCount == grid.length){
-                    cCount = 0;
-                }
+                if (cCount > grid.length) cCount = 1;
             }
             rCount++;
-            if (rCount == grid.length){
-                rCount = 0;
-            }
+            if (rCount > grid.length) rCount = 1;
         }
         return shipIsAt;
     }
