@@ -44,7 +44,7 @@ public class Battleship260_05 {
     
     // MAIN METHOD
     public static void main(String[] args) {
-       /* 
+        
         
        // rachel's individual assignment 6
         rachel_lesson6_individual_assignment rachel = new rachel_lesson6_individual_assignment();
@@ -55,18 +55,15 @@ public class Battleship260_05 {
         String response = testinput.getInput();
         System.out.println(response);
         
-        //Alex's Individual Assignment 5
-        //AlexLesson5Alternate shipinfolist = new AlexLesson5Alternate(); 
-        //shipinfolist.allShipTypes();   
-        
-        AlexLesson5 getHitinput = new AlexLesson5(); 
-        getHitinput.totalHitWin(); 
+        //Alex's Individual Assignment 6
+        AlexLesson6 getHitSum = new AlexLesson6(); 
+        getHitSum.getHitSum(); 
         
         
         //Sue's individual assignment 5
         Assignment5IndividualSue test = new Assignment5IndividualSue();
         System.out.println(test.topScore(5));
-        */
+        
         
         //Sue's individual assignment 6
         
