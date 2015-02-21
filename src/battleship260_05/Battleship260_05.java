@@ -98,6 +98,7 @@ public class Battleship260_05 {
         
         //Pass the Board information back to the View
         board.displayBoard(boardInfo); //Display the board to the user.
+        
         String[] shipNames = {"CARRIER", "BATTLESHIP", "DESTROYER", "SUBMARINE", "PATROLBOAT"};
         String[] shipSymbols = {"C", "B", "D", "S", "P"};
         int[] shipSizes = {5,4,3,3,2};
@@ -113,7 +114,6 @@ public class Battleship260_05 {
             board.displayBoard(boardData.getBoard());
         }
         boardData.shipsPlaced = true;
-        
         
         if (boardData == null){
             new BattleshipError().displayError("There is no board to search.");
