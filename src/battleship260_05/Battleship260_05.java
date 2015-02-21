@@ -42,12 +42,12 @@ public class Battleship260_05 {
     
     // MAIN METHOD
     public static void main(String[] args) {
-        /*
+       /* 
         
-        //rachel's individual assignment 5
-        Turn tinput = new Turn();
-       tinput.showsalvoShots();
-        
+       // rachel's individual assignment 6
+        rachel_lesson6_individual_assignment rachel = new rachel_lesson6_individual_assignment();
+       rachel.showrachelscore();
+       
         //Paired programming assignment 5
         BoardView testinput = new BoardView();
         String response = testinput.getInput();
