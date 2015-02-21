@@ -161,7 +161,7 @@ public class Battleship260_05 {
         
         
         
-        
+    
         newGame.showPlayerOne();
         newGame.showPlayerTwo();
         
@@ -216,7 +216,7 @@ public class Battleship260_05 {
         newGame.getTotalDamage(-1, 17);
         newGame.getTotalDamage(12, 0);
         newGame.getTotalDamage(25, 17);
-        // END LESSON 3 CODE
+        // END LESSON 3 CODE   
     }
     
     // Paired Programming Assignment Lesson 2
