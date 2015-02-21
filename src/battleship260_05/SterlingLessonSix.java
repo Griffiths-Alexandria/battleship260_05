@@ -9,7 +9,6 @@ package battleship260_05;
  *
  * @author Sterling
  */
-
 public class SterlingLessonSix {
       //computes the top five average scores
     public void stuff(){
