@@ -9,6 +9,7 @@ package battleship260_05;
  *
  * @author Sterling
  */
+
 public class SterlingLessonSix {
       //computes the top five average scores
     int scores [] = { 5000, 2800, 1974, 800, 700};
@@ -27,3 +28,4 @@ public class SterlingLessonSix {
     system.out.println(average + "The average score is of the top 5 is: ");      
     }
 }
+
