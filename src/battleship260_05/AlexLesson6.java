@@ -11,7 +11,7 @@ package battleship260_05;
  */
 public class AlexLesson6 {
             
-        int[] turns = {0, 1, 2, 4, 3, 0, 4, 3, 0};
+        int[] turns = {0, 1, 2, 4, 3, 1, 4, 3, 0};
    
     public void getHitSum(){     
         System.out.println();
@@ -22,11 +22,14 @@ public class AlexLesson6 {
         int sum = 0; 
         int i; 
         double average =0; 
+         
+        
         int largest = Integer.MIN_VALUE; 
         
         for(i=0; i < turns.length; i++){
             sum += turns[i]; 
-            average = sum/turns.length; 
+            average = ((sum/turns.length)*100)/100;
+            
         }
          
         for (i =0; i < turns.length; i++){

@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package battleship260_05;
+//package battleship260_05;
 
 /**
  *
@@ -33,7 +33,7 @@ public class SterlingLessonSix {
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package battleship260_05;
+//package battleship260_05;
 
 /**
  *
