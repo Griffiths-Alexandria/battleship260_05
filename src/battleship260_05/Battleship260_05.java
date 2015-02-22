@@ -45,10 +45,12 @@ public class Battleship260_05 {
     // MAIN METHOD
     public static void main(String[] args) {
         
+        SterlingLessonSix average = new SterlingLessonSix();
+        average.stuff();
         
-       // rachel's individual assignment 6
+        // rachel's individual assignment 6
         rachel_lesson6_individual_assignment rachel = new rachel_lesson6_individual_assignment();
-       rachel.showrachelscore();
+        rachel.showrachelscore();
        
         //Paired programming assignment 5
         BoardView testinput = new BoardView();
