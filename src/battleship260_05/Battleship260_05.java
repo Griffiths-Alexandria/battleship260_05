@@ -48,6 +48,9 @@ public class Battleship260_05 {
         SterlingLessonSix average = new SterlingLessonSix();
         average.stuff();
         
+        DanielLesson6 danielHits = new DanielLesson6();
+        DanielLesson6.hitCounter();
+        
         // rachel's individual assignment 6
         rachel_lesson6_individual_assignment rachel = new rachel_lesson6_individual_assignment();
         rachel.showrachelscore();
@@ -74,6 +77,7 @@ public class Battleship260_05 {
         
         new Assignment5IndividualSue().sumOfScore();
         
+               
         /*
         // Wendell's individual assignment 5
         WendellLesson5 shipDetail = new WendellLesson5();
