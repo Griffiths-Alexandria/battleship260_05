@@ -171,15 +171,6 @@ public class Battleship260_05 {
         new BattleshipArt().displayShip();
         new BattleshipArt().displayTitle();
         
-        //Temporary Test of Game Art
-        /*
-         * new BattleshipArt().displayBattle();
-         * new BattleshipArt().displayHit();
-         * new BattleshipArt().displayMiss();
-         * new BattleshipArt().displaySunk();
-         */
-        
-        
         //Call the Main Menu View
         MainMenuView mainMenuView = new MainMenuView();
         mainMenuView.getInput();
@@ -189,18 +180,19 @@ public class Battleship260_05 {
         
         
         
-        newGame.showPlayerOne();
-        newGame.showPlayerTwo();
+        //newGame.showPlayerOne();
+        //newGame.showPlayerTwo();
         
         /*  Daniel Diaz Homework: Create a new instance of the class in the main( )  function of the main class 
         *   and call the display functions to list the values of the variables in the main ( ) funciton.
-        */
+        
         ScoreBoard NewScoreboard = new ScoreBoard ("* Joe Black *", 11, 3, 5, 0, 27.28 , "\n* Sue Red *", 10, 5, 50.00);
         NewScoreboard.getInfo();
-    
-        //  Displaying the hits by ship in a different way, I will be expecting the data from the Ship Class.
-        NewScoreboard.getShipHits(); 
+        */
         
+        //  Displaying the hits by ship in a different way, I will be expecting the data from the Ship Class.
+        //NewScoreboard.getShipHits(); 
+        /*
         // Creating new instances of each ship. Christian.
         Ship Submarine = new Ship("Submarine", "A 3-Space Ship", 3);
         Ship Carrier = new Ship("Aircraft Carrier", "A 5-Space Ship", 5);
@@ -214,7 +206,7 @@ public class Battleship260_05 {
         Patrol.getInfo();
         Battleship.getInfo();
         Destroyer.getInfo();
-        
+        */
         Battleship260_05 myGame = new Battleship260_05();
         myGame.getName();
         myGame.displayHelp();
@@ -230,14 +222,14 @@ public class Battleship260_05 {
         newGame.getPlayerAccuracy(5, 8);
         newGame.getPlayerAccuracy(-1, 6);
         newGame.getPlayerAccuracy(5, -1);
-        
+        /*
         // Lesson 3 Individual : Christian
         Patrol.hitReduction();
         Patrol.hitReduction();
         Patrol.hitReduction();
         Patrol.hitReduction();
         Patrol.hitReduction();
-        
+        */
         //Logan's test for Individual Assignment - Lesson 3
         newGame.getTotalDamage(5, 17);
         newGame.getTotalDamage(-1, 17);
