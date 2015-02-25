@@ -14,7 +14,9 @@ package battleship260_05;
  */
 public class Player {
   String name;
-  String color;
+  BoardModel board;
+  BoardView boardView;
+  Ship[] playerShips;
   int wins;
   int losses;
   
@@ -23,20 +25,16 @@ public class Player {
   int gameMisses;
   //END Player DB variables
   
-  Player(String name, String color){
-      this.name = name;
-      this.color = color;
+  public Player(){
+      /*this.name = name;
       this.wins = 0;
-      this.losses =0;
+      this.losses =0;*/
   }
   
   public String getName(){
       return this.name;
   }
   
-  public String getColor(){
-      return this.color;
-  }
   public int getWins(){
       return this.wins;
   }
@@ -60,5 +58,13 @@ public class Player {
       return (wins + losses);
       
 }
+    public Ship[] setPlayerShips(GameModel game){
+        int numShips = GameModel.numShips;
+        Ship[] playerShips = new Ship[numShips];
+        for (int s = 0; s < numShips; s++){
+            playerShips[s] = new Ship(GameModel.shipNames[s], GameModel.shipSymbols[s], GameModel.shipSizes[s]);
+        }
+        return playerShips;
+    }
   
 }

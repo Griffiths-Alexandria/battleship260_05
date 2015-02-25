@@ -16,13 +16,18 @@ public class GameModel {
     public static final int numShips = 5;
     public static final boolean shipID = true;
     public static final boolean salvoMode = false;
+    public static String[] shipNames = {"CARRIER", "BATTLESHIP", "DESTROYER", "SUBMARINE", "PATROLBOAT"};
+    public static String[] shipSymbols = {"C", "B", "D", "S", "P"};
+    public static int[] shipSizes = {5,4,3,3,2};
     
     //Game Type Variables
     public static final String PvP = "TWO_PLAYER";
     public static final String PvCPU = "ONE_PLAYER";
     
     //Game Status Variables
+    public static final String PRE_GAME = "PRE_GAME";
     public static final String NEW_GAME = "NEW_GAME";
+    public static final String PLAYING = "PLAYING";    
     public static final String PLAY_AGAIN = "PLAY_AGAIN";
     public static final String SURRENDER = "SURRENDER";
     public static final String WINNER = "WINNER";
@@ -41,22 +46,22 @@ public class GameModel {
     
     //Default Constructor
     public GameModel() {
-        //this.player1 = new Player();
-        //this.player2 = new Player();
+        this.player1 = new Player();
+        this.player2 = new Player();
     }
-    /*
     public GameModel(String gameType){
         this();
         this.type = gameType;
-        this.player1.boardModel.boardSize = boardSize;
-        this.player2.boardModel.boardSize = boardSize;
-        this.player1.numShips = numShips;
-        this.player2.numShips = numShips;
+        this.player1.board = new BoardModel(GameModel.boardSize, true);
+        this.player2.board = new BoardModel(GameModel.boardSize, true);
+        this.player1.playerShips = new Ship[GameModel.numShips];
+        this.player2.playerShips = new Ship[GameModel.numShips];
+        
     }
     
     public void start() {
-        this.player1.boardModel.getNewBoard();
-        this.player2.boardModel.getNewBoard();
+        this.player1.board.getNewBoard();
+        this.player2.board.getNewBoard();
         this.status = GameModel.NEW_GAME;
-    }*/
+    }
 }

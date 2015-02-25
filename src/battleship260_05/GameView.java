@@ -22,7 +22,22 @@ public class GameView {
     public void gameLoop(){
         
         while(game.status != GameModel.GAME_OVER){
-            System.out.println("It is " + game.currentPlayer.name )
+            if (game.status.equals(GameModel.PRE_GAME)){
+                //Get player names
+                game.player1.name = "Player 1";
+                game.player2.name = "Player 2";
+                
+                //Set the player ship arrays with values
+                game.player1.playerShips = game.player1.setPlayerShips(game);
+                game.player2.playerShips = game.player2.setPlayerShips(game);
+                
+                game.player1.board.grid = game.player1.board.getNewBoard();
+                game.player2.board.grid = game.player2.board.getNewBoard();
+                
+                
+            }
+            
+            
         }
         
     }

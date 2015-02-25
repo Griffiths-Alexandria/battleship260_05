@@ -5,6 +5,7 @@
  */
 package battleship260_05;
 
+import java.text.DecimalFormat;
 import java.util.Scanner;
 
 
@@ -25,14 +26,16 @@ public class HighScoreView {
     
     public HighScoreView(){
         this.playerDB = new DBConnect();
+        playerDB.displayNames();
         this.stats = new Statistics();
-        this.stats = playerDB.getAllPlayerData();
+        Statistics test = playerDB.getAllPlayerData();
+        this.stats = test;
         this.stats.setAccuracies();
         this.stats.setRankings();
     }
     public Statistics sortHighScores(){
     
-        for (int i = 0; i < this.stats.playerRankings.size(); i++) {
+        for (int i = 1; i < this.stats.playerRankings.size(); i++) {
             int j = i;
             while (j > 0 && this.stats.playerRankings.get(i) > this.stats.playerRankings.get(j-1)){
                 j--;
@@ -88,10 +91,11 @@ public class HighScoreView {
         } else {
         */
         highScores = sortHighScores();//scoreData = sortHighScores();
+        DecimalFormat df = new DecimalFormat("##0.0");
         for(int i = 0; i < highScores.playerNames.size(); i++){
               System.out.println("  " + (i+1) + ".\t" + highScores.playerNames.get(i) + "\t"
-                      + highScores.playerWins.get(i) + ".\t" + highScores.playerLosses.get(i)
-                      + ".\t" + highScores.playerAccuracies.get(i) + ".\t" + highScores.playerRankings.get(i));
+                      + highScores.playerWins.get(i) + "\t" + highScores.playerLosses.get(i)
+                      + "\t" + df.format(highScores.playerAccuracies.get(i)) + "%\t" + highScores.playerRankings.get(i));
         }
         
     }

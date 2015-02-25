@@ -28,7 +28,13 @@ public class Statistics {
     public int playerRanking;
     
     public Statistics(){
+        this.playerNames = new ArrayList<>();
+        this.playerWins = new ArrayList<>();
+        this.playerLosses = new ArrayList<>();
+        this.playerTotalHits = new ArrayList<>();
+        this.playerTotalMisses = new ArrayList<>();
         this.playerAccuracies = new ArrayList<>();
+        this.playerRankings = new ArrayList<>();
     }
     public double getAccuracy(int hits, int misses){
         if (hits < 0) {
@@ -40,9 +46,12 @@ public class Statistics {
             return -1.0;
         }
         int totalShots = hits + misses;
-        this.playerAccuracy =  (((double)hits * 100) / (double)totalShots);
-        
-        return playerAccuracy;
+        if (totalShots == 0){
+            return 0.0;
+        } else {
+            this.playerAccuracy =  (((double)hits * 100) / (double)totalShots);        
+            return playerAccuracy;
+        }
     }
     
     public int getRanking(double winRatio, double accuracy){
@@ -54,7 +63,8 @@ public class Statistics {
             //new BattleshipError().displayError("Invalid number of misses: " + misses);
             return -999;
         }
-        this.playerRanking = (int) (1000*(winRatio/accuracy));
+        double tempRank = 100000*(winRatio/accuracy);
+        this.playerRanking = (int) tempRank;
         
         return playerRanking;
     }
@@ -68,9 +78,15 @@ public class Statistics {
     public void setRankings(){
         for (int i = 0; i < playerNames.size(); i++){
             int totalGames = playerWins.get(i)+playerLosses.get(i);
-            double ratio = (double) (playerWins.get(i)/totalGames);
+            double ratio;
+            if (totalGames == 0){
+                ratio = 0.0;
+            } else {
+                ratio = (double) playerWins.get(i) / (double)totalGames;
+            }
             int rank = getRanking(ratio, playerAccuracies.get(i));
             this.playerRankings.add(rank);
+            
         }
     }
             

@@ -62,8 +62,10 @@ public class DBConnect {
             String query = "select * from players";
             rs = stmt.executeQuery(query);
             while (rs.next()){
-                allPlayers.playerNames.add(rs.getString("playerName"));
-                allPlayers.playerWins.add(rs.getInt("wins"));
+                String tempName = rs.getString("playerName");
+                allPlayers.playerNames.add(tempName);
+                int tempWins = rs.getInt("wins");
+                allPlayers.playerWins.add(tempWins);
                 allPlayers.playerLosses.add(rs.getInt("losses"));
                 allPlayers.playerTotalHits.add(rs.getInt("totalHits"));
                 allPlayers.playerTotalMisses.add(rs.getInt("totalMisses"));

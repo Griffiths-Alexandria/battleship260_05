@@ -11,20 +11,37 @@ package battleship260_05;
  */
 public class PlayerMenuControl {
     
-    public void displayNameMenu() {
-        NameMenuView nameMenu = new NameMenuView();
-        //System.out.println("Starting a new two player game...");
-        nameMenu.getInput();
-    }
-    public void startOnePlayerGame() {
-        // Battleship260_05 newGame = new Battleship260_05;
-        System.out.println("Starting a new single player game...");
-        // newGame.generateNew1PGame();
+    public void startGame(int numPlayers) {
+        GameModel game;
+        if (numPlayers == 2){
+            game = this.createGame("TWO_PLAYER");
+            
+        }
+        GameView gameView = new GameView(game);
+        gameView.gameLoop();
+
     }
     public void returntoPreviousMenu() {
         //MainMenuView mainMenu = new MainMenuView();
         System.out.println("Returning to previous menu...");
         //mainMenu.getInput();
         return;
+    }
+    private GameModel createGame(String gameType){
+        GameModel game = null;
+        Player player1 = null;
+        Player player2 = null;
+        
+        if (gameType.equals(GameModel.PvP)){
+            game = new GameModel(GameModel.PvP);
+            player1 = new Player();
+            player2 = new Player();
+            
+        }
+        game.player1 = player1;
+        game.player2 = player2;
+        game.status = GameModel.PRE_GAME;
+        
+        return game;
     }
 }

@@ -22,16 +22,9 @@ public class Battleship260_05 {
   
     
     // VARIABLE DECLARATIONS
-    String name;
-    int choice;
+   
     
-    String page;
-    
-    Player player1 = new Player("Joe","black");
-    Player player2 = new Player("Lucy","red");
-    
-    public static BoardModel boardData;
-    public static BoardView board;
+
     //I don't think we are using these anywhere. NO we are not, let's delete? 
     /*String instructions = "Welcome to the game of Battleship! \n\n"
            + "Player 1 and Player 2 will be competing with each other. \n"
@@ -202,6 +195,7 @@ public class Battleship260_05 {
         Battleship.getInfo();
         Destroyer.getInfo();
         */
+        /*
         Battleship260_05 myGame = new Battleship260_05();
         myGame.getName();
         myGame.displayHelp();
@@ -225,6 +219,7 @@ public class Battleship260_05 {
         Patrol.hitReduction();
         Patrol.hitReduction();
         */
+        /*
         //Logan's test for Individual Assignment - Lesson 3
         newGame.getTotalDamage(5, 17);
         newGame.getTotalDamage(-1, 17);
@@ -301,6 +296,6 @@ public class Battleship260_05 {
         //System.out.println("This is my average guess :");
         System.out.println("This is my average guess: " + menuDisp.getSuggest());
         //System.out.println("The average random guess is : " + getSuggest.averageGuess);
-
+       */
     }
 }

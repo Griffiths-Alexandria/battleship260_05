@@ -34,10 +34,11 @@ public class PlayerMenuView {
 
                 switch (command) {
                     case "1"://PLAYER VS PLAYER
-                        this.playerMenuControl.displayNameMenu();
+                        this.playerMenuControl.startGame(2);
                         break;
                     case "2"://PLAYER VS COMPUTER
-                        this.playerMenuControl.startOnePlayerGame();
+                        //this.playerMenuControl.startOnePlayerGame();
+                        new BattleshipError().displayError("Invalid command. Please enter a valid command.");
                         break;
                     case "3"://EXIT
                         this.playerMenuControl.returntoPreviousMenu();

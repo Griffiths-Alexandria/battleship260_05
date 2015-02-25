@@ -209,6 +209,7 @@ public class BoardView {
     }
     
     public String getInput(){
+        
 
         Scanner inFile = new Scanner(System.in);
         String[] coordinates;
