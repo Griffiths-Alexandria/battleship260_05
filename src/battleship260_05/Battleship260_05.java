@@ -67,18 +67,8 @@ public class Battleship260_05 {
         //Wendell Individual Assignment 6
         WendellLesson6 newAssign = new WendellLesson6();
         newAssign.totHits();
-        
-        //Sue's individual assignment 5
-        Assignment5IndividualSue test = new Assignment5IndividualSue();
-        System.out.println(test.topScore(5));
-        
-        
-        //Sue's individual assignment 6
-        
-        new Assignment5IndividualSue().sumOfScore();
-        
-               
-        /*
+       
+           
         // Wendell's individual assignment 5
         WendellLesson5 shipDetail = new WendellLesson5();
         shipDetail.myList();
@@ -295,11 +285,9 @@ public class Battleship260_05 {
     //End Logan's week 3 individual assignment
     void showPlayerOne() {
         System.out.println(player1.getName());
-        System.out.println(player1.getColor());
-    }
+         }
     void showPlayerTwo() {
         System.out.println(player2.getName());
-        System.out.println(player2.getColor());
     }
     public void displayMenu(){
         Menu menuDisp = new Menu();
