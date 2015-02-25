@@ -44,7 +44,7 @@ public class Battleship260_05 {
     
     // MAIN METHOD
     public static void main(String[] args) {
-        /*
+        
         SterlingLessonSix average = new SterlingLessonSix();
         average.stuff();
         
@@ -91,7 +91,6 @@ public class Battleship260_05 {
         //SterlingLessonFive sterling = new SterlingLessonFive();
         //sterling.showBoard();
         */
-        /*
         //START 
         //To allow BoardView and BoardModel to interact, for now I am treating this main class as the controller. Logan
         
