@@ -41,10 +41,10 @@ public class GameModel {
     
     //Default Constructor
     public GameModel() {
-        this.player1 = new Player();
-        this.player2 = new Player();
+        //this.player1 = new Player();
+        //this.player2 = new Player();
     }
-    
+    /*
     public GameModel(String gameType){
         this();
         this.type = gameType;
@@ -58,5 +58,5 @@ public class GameModel {
         this.player1.boardModel.getNewBoard();
         this.player2.boardModel.getNewBoard();
         this.status = GameModel.NEW_GAME;
-    }
+    }*/
 }

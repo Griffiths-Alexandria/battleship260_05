@@ -34,7 +34,7 @@ public class DBConnect {
             System.out.println("Error: "+ex);
         }
     }
-    
+    // Return all the Human Players in an Array List.
     public ArrayList getNames(){
         try {
             ArrayList<String> result = new ArrayList<>();
@@ -52,9 +52,33 @@ public class DBConnect {
             }
             return result;
         } catch (Exception ex){
+            System.out.println("Error: "+ex);
             return null;
         }
     }
+    public Statistics getAllPlayerData(){
+        try {
+            Statistics allPlayers = new Statistics();
+            String query = "select * from players";
+            rs = stmt.executeQuery(query);
+            while (rs.next()){
+                allPlayers.playerNames.add(rs.getString("playerName"));
+                allPlayers.playerWins.add(rs.getInt("wins"));
+                allPlayers.playerLosses.add(rs.getInt("losses"));
+                allPlayers.playerTotalHits.add(rs.getInt("totalHits"));
+                allPlayers.playerTotalMisses.add(rs.getInt("totalMisses"));
+            }
+            return allPlayers;
+        }
+        catch(Exception ex){
+            System.out.println("Error: "+ex);
+            return null;
+        }
+    }
+    
+    
+    
+    // Simple TEST method to output names to the console. Not for use in game.
     public void displayNames(){
         try {
             String query = "select playerName from players where playerName != 'CPU'";
