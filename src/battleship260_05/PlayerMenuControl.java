@@ -12,7 +12,7 @@ package battleship260_05;
 public class PlayerMenuControl {
     
     public void startGame(int numPlayers) {
-        GameModel game;
+        GameModel game = new GameModel();
         if (numPlayers == 2){
             game = this.createGame("TWO_PLAYER");
             

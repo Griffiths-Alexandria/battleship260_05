@@ -31,10 +31,9 @@ public class GameView {
                 game.player1.playerShips = game.player1.setPlayerShips(game);
                 game.player2.playerShips = game.player2.setPlayerShips(game);
                 
-                game.player1.board.grid = game.player1.board.getNewBoard();
-                game.player2.board.grid = game.player2.board.getNewBoard();
                 
                 
+                game.status = GameModel.NEW_GAME;
             }
             
             

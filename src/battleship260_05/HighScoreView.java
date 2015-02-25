@@ -17,7 +17,6 @@ public class HighScoreView {
     
     DBConnect playerDB;
     Statistics stats;
-    Statistics sortedStats;
     
     int[] ranks;
         //String[] players = {"Alex", "Sue", "Rachel"}; 
@@ -26,10 +25,8 @@ public class HighScoreView {
     
     public HighScoreView(){
         this.playerDB = new DBConnect();
-        playerDB.displayNames();
         this.stats = new Statistics();
-        Statistics test = playerDB.getAllPlayerData();
-        this.stats = test;
+        this.stats = playerDB.getAllPlayerData();
         this.stats.setAccuracies();
         this.stats.setRankings();
     }
@@ -55,16 +52,17 @@ public class HighScoreView {
                 this.stats.playerLosses.set(k, this.stats.playerLosses.get(k-1));//[k] =scores[k - 1];
                 this.stats.playerAccuracies.set(k, this.stats.playerAccuracies.get(k-1));//[k] =scores[k - 1];
                 //players[k] = players[k-1];
+            }
+            
+            this.stats.playerRankings.set(j, tmpRank);
+            this.stats.playerNames.set(j, tmpName);
+            this.stats.playerWins.set(j, tmpWins);
+            this.stats.playerLosses.set(j, tmpLosses);
+            this.stats.playerAccuracies.set(j, tmpAcc);
 
-                this.stats.playerRankings.set(j, tmpRank);
-                this.stats.playerNames.set(j, tmpName);
-                this.stats.playerWins.set(j, tmpWins);
-                this.stats.playerLosses.set(j, tmpLosses);
-                this.stats.playerAccuracies.set(j, tmpAcc);
+                //scores[j] = tmpScore;
+                //players[j] = tmpName;
 
-                    //scores[j] = tmpScore;
-                    //players[j] = tmpName;
-            } 
         
         }
         
@@ -77,11 +75,10 @@ public class HighScoreView {
     
     public void displayScores(){
         
-        //ScoreInfo scoreData; 
         Statistics highScores;
         
         System.out.println("\n**********************************************************************");
-        System.out.println("**                        PLAYER    SCORES                          **");
+        System.out.println("**                         HIGH    SCORES                           **");
         System.out.println("**********************************************************************\n");
         
          
@@ -92,12 +89,16 @@ public class HighScoreView {
         */
         highScores = sortHighScores();//scoreData = sortHighScores();
         DecimalFormat df = new DecimalFormat("##0.0");
+        
+        System.out.println("  PLAYER\tWINS\tLOSSES\tACCURACY\tSCORE");
+        
         for(int i = 0; i < highScores.playerNames.size(); i++){
-              System.out.println("  " + (i+1) + ".\t" + highScores.playerNames.get(i) + "\t"
-                      + highScores.playerWins.get(i) + "\t" + highScores.playerLosses.get(i)
-                      + "\t" + df.format(highScores.playerAccuracies.get(i)) + "%\t" + highScores.playerRankings.get(i));
+            System.out.println("  " + (i+1) + ". " + highScores.playerNames.get(i) + "\t"
+                    + highScores.playerWins.get(i) + "\t" + highScores.playerLosses.get(i)
+                    + "\t" + df.format(highScores.playerAccuracies.get(i)) + "%\t\t" + highScores.playerRankings.get(i));
         }
         
+        System.out.println("\nPress Enter to return to the Main Menu:");
     }
     
     public void getInput(){

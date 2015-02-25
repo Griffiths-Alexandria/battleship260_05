@@ -46,12 +46,14 @@ public class GameModel {
     
     //Default Constructor
     public GameModel() {
-        this.player1 = new Player();
-        this.player2 = new Player();
+        //this.player1 = new Player();
+        //this.player2 = new Player();
     }
     public GameModel(String gameType){
-        this();
+        //this();
         this.type = gameType;
+        this.player1 = new Player();
+        this.player2 = new Player();
         this.player1.board = new BoardModel(GameModel.boardSize, true);
         this.player2.board = new BoardModel(GameModel.boardSize, true);
         this.player1.playerShips = new Ship[GameModel.numShips];

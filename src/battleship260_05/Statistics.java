@@ -63,7 +63,7 @@ public class Statistics {
             //new BattleshipError().displayError("Invalid number of misses: " + misses);
             return -999;
         }
-        double tempRank = 100000*(winRatio/accuracy);
+        double tempRank = 10*(winRatio*accuracy);
         this.playerRanking = (int) tempRank;
         
         return playerRanking;
@@ -77,12 +77,11 @@ public class Statistics {
     }
     public void setRankings(){
         for (int i = 0; i < playerNames.size(); i++){
-            int totalGames = playerWins.get(i)+playerLosses.get(i);
             double ratio;
-            if (totalGames == 0){
-                ratio = 0.0;
+            if (playerLosses.get(i)==0) {
+                ratio = (double) playerWins.get(i);
             } else {
-                ratio = (double) playerWins.get(i) / (double)totalGames;
+                ratio = (double) playerWins.get(i) / (double)playerLosses.get(i);
             }
             int rank = getRanking(ratio, playerAccuracies.get(i));
             this.playerRankings.add(rank);
