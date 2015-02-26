@@ -1127,8 +1127,8 @@ public class shipPlacement {
                     break;
             }
         }
-        for (int i=0; i < display.length; i++) {
-            System.out.println(display[i][0] + display[i][1] + display[i][2] + display[i][3] + display[i][4] + display[i][5]);
+        for (String[] display1 : display) {
+            System.out.println(display1[0] + display1[1] + display1[2] + display1[3] + display1[4] + display1[5]);
         }
     }
     
