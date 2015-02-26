@@ -37,12 +37,16 @@ public class GameView {
                 game.status = GameModel.NEW_GAME;
             }
             if (game.status.equals(GameModel.NEW_GAME)){
+                game.player1.boardView.displayBoard(game.player1.board.getBoard(), game.status); //added empty board for reference on first ship placement - alex 
+                System.out.println(); 
                 System.out.println(game.player1.name+", Please set your ships on the board.");
                 for (Ship ship : game.player1.playerShips){
                     LocationInfo location = game.player1.boardView.getShipPlacement(ship, game.player1.board.getBoard());
                     game.player1.board.setShip(location, ship);
                     game.player1.boardView.displayBoard(game.player1.board.getBoard(), game.status);
                 }
+                game.player2.boardView.displayBoard(game.player2.board.getBoard(), game.status); //added empty board for reference on first ship placement - alex 
+                System.out.println(); 
                 System.out.println(game.player2.name+", Please set your ships on the board.");
                 for (Ship ship : game.player2.playerShips){
                     LocationInfo location = game.player2.boardView.getShipPlacement(ship, game.player2.board.getBoard());
@@ -64,13 +68,13 @@ public class GameView {
                 case 0:
                     new BattleshipArt().displayMiss();
                     // show board 
-                    //alternate players method
+                    this.gameControl.alternateturn();
                     break;
                 case 1:
                     new BattleshipArt().displayHit();
                     //show board
                     //If Options.ShipID = True then tell which ship was hit
-                    //alternate players
+                    this.gameControl.alternateturn(); 
                     break;
             }
         }
