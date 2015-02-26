@@ -1,1 +1,4 @@
-# battleship260_05
+CIT260Examples
+==============
+
+Example projects for CIT 260
