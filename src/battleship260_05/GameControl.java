@@ -24,22 +24,21 @@ public class GameControl {
     
     
     public void alternateturn(){
-           
-        while(game.status.equals(GameModel.PLAYING)){
-            int counter = 0;
+  
+           int counter = 0; 
             if(counter % 2 == 0){
                 this.game.player1 = this.game.attacker;
                 this.game.player2 = this.game.defender;
+                counter++; 
             }
-            if (counter % 2 != 0){               
+            else if (counter % 2 == 1){               
                 this.game.player1 = this.game.defender;
                 this.game.player2 = this.game.attacker; 
+                counter++; 
             }
-        counter++;
-        }
-    }
+   
 
-    
+}
     
      
     public void wonGame(){
