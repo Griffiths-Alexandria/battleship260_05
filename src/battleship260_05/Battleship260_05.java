@@ -6,6 +6,7 @@ package battleship260_05;
  */
 
 //Player DB import statements (LOGAN)
+import java.awt.Point;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -37,6 +38,13 @@ public class Battleship260_05 {
     
     // MAIN METHOD
     public static void main(String[] args) {
+       // Test Point Values
+        /*
+        BoardView Test = new BoardView();
+       Point testPoint = new Point();
+       testPoint = Test.getAttack();
+       System.out.println("X = " + testPoint.x + "Y = " + testPoint.y);
+        */
         /*
         SterlingLessonSix average = new SterlingLessonSix();
         average.stuff();
