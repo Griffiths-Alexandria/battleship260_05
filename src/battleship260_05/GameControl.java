@@ -23,9 +23,19 @@ public class GameControl {
     
     
     public void alternateturn(){
-        // would I assign the players a number? if( player % 2 == 0) player1=currentPlayer; else player2=currentPlayer (?) 
-        //would I set parameters to stop when hits reached a total of 17 by a single player? 
-      
+           
+        while(game.status == GameModel.PLAYING){
+            int counter = 1;
+            if(counter % 2 == 0){
+                this.game.player1 = this.game.attacker;
+                this.game.player2 = this.game.defender;
+            }
+            if (counter % 2 != 0){               
+                this.game.player1 = this.game.defender;
+                this.game.player2 = this.game.attacker; 
+            }
+        counter++;
+        }
     }
 
     
