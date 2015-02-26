@@ -5,6 +5,8 @@
  */
 package battleship260_05;
 
+import java.awt.Point;
+
 /**
  *
  * @author Logan Work
@@ -21,6 +23,7 @@ public class BoardModel {
         this.setup = setup;
         
     }
+    
     public void setShip(LocationInfo location, Ship ship) {
         int row = location.row;
         int col = location.col;
@@ -68,5 +71,24 @@ public class BoardModel {
             if (rCount > grid.length) rCount = 1;
         }
         return shipIsAt;
+    }
+    
+    public int testAttack(Point attack, String[][] grid){
+        //-1 for already attacked
+        //0 for miss
+        //1 for hit
+        //2 for sunk - ignore this for now
+        
+        String[] attackSymbols = {"O", "X", "#"};
+        //for attackSymbols
+            // if the attack location on the grid equals one of those
+            //return -1
+        String[] shipSymbols = GameModel.shipSymbols;
+        //for attackSymbols
+            // if the attack location on the grid equals one of these
+            // replace contents of attack location on the grid with "X"
+            //return 1
+        //change grid space to "O"
+        return 0;
     }
 }

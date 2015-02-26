@@ -34,12 +34,12 @@ public class PlayerMenuControl {
         
         if (gameType.equals(GameModel.PvP)){
             game = new GameModel(GameModel.PvP);
-            player1 = new Player();
-            player2 = new Player();
+            //player1 = new Player();
+            //player2 = new Player();
             
         }
-        game.player1 = player1;
-        game.player2 = player2;
+        //game.player1 = player1;
+        //game.player2 = player2;
         game.status = GameModel.PRE_GAME;
         
         return game;

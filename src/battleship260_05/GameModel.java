@@ -56,6 +56,9 @@ public class GameModel {
         this.player2 = new Player();
         this.player1.board = new BoardModel(GameModel.boardSize, true);
         this.player2.board = new BoardModel(GameModel.boardSize, true);
+        this.player1.boardView = new BoardView();
+        this.player2.boardView = new BoardView();
+        
         this.player1.playerShips = new Ship[GameModel.numShips];
         this.player2.playerShips = new Ship[GameModel.numShips];
         

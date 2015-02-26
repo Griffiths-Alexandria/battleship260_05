@@ -14,9 +14,14 @@ import java.util.Scanner;
 public class BoardView {
     int boardDim;
     
-    public void displayBoard(String[][] grid){
-        int i, j;
+    public BoardView(){
         
+    }
+    
+    public void displayBoard(String[][] grid, String status){
+        int i, j;
+        String gameStatus = status;
+        String[] symbols = GameModel.shipSymbols;
         for (i=-1; i<grid.length; ++i){
             for(j=0; j<grid.length; ++j) {
                 if (i==-1){
@@ -36,7 +41,13 @@ public class BoardView {
                         }
                         System.out.print(i+1);
                     }
-                    System.out.print("["+grid[i][j]+"]");
+                    //if status is PLAYING, then 
+                        //for (symbol : symbols){
+                            // if grid[i][j] equals symbol
+                                //System.out.print("[ ]");
+                    
+                    //else
+                        System.out.print("["+grid[i][j]+"]");
                 }
 
             }
@@ -143,8 +154,8 @@ public class BoardView {
             startRow = Integer.parseInt(startCoords[0]);
             startCol = Integer.parseInt(startCoords[1]);
            
-            if(startRow < 1 || startRow > this.boardDim || startCol < 1 || startCol > this.boardDim){
-                new BattleshipError().displayError("Coordinates must be greater than 0 and less than or equal to " + this.boardDim );
+            if(startRow < 1 || startRow > board.length || startCol < 1 || startCol > board.length){
+                new BattleshipError().displayError("Coordinates must be greater than 0 and less than or equal to " + board.length );
                 continue;
             }
             
@@ -180,7 +191,7 @@ public class BoardView {
             
             //Check to make sure ship will fit on board and is not occupied.
             if(vertical){
-                if ((startRow-1) + ship.size > this.boardDim){
+                if ((startRow-1) + ship.size > board.length){
                     new BattleshipError().displayError("The ship does not fit vertically in this location.");
                     continue;
                 }
@@ -191,7 +202,7 @@ public class BoardView {
                     }
                 }
             } else {
-                if ((startCol-1) + ship.size > this.boardDim){
+                if ((startCol-1) + ship.size > board.length){
                     new BattleshipError().displayError("The ship does not fit horizontally in this location.");
                     continue;
                 }
@@ -208,7 +219,7 @@ public class BoardView {
         return location;
     }
     
-    public String getInput(){
+    public Point getAttack(){
         
 
         Scanner inFile = new Scanner(System.in);
@@ -267,6 +278,10 @@ public class BoardView {
            
             valid = true;
         }
-        return "You fired at " + x + ","+ y;
+        Point attack = new Point();
+        attack.x = x;
+        attack.y = y;
+        
+        return attack;
     }
 }
